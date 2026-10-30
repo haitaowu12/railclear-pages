@@ -1,0 +1,5857 @@
+{
+  "engine": "railclear-point-mass/0.3.0",
+  "generatedAt": "2026-10-26T14:56:52.228Z",
+  "status": "computed",
+  "project": {
+    "schemaVersion": 1,
+    "name": "Reference corridor",
+    "revision": "P01",
+    "author": "",
+    "basis": "Synthetic demonstration — replace and review all inputs",
+    "vehicle": {
+      "id": "synthetic-metro",
+      "name": "Metro · 4-car reference",
+      "status": "Synthetic — demonstration only",
+      "evidence": "Invented parameter set for software demonstration. Not a real fleet specification.",
+      "massT": 160,
+      "lengthM": 80,
+      "maxSpeedKph": 100,
+      "tractionA": 0.9,
+      "brakeA": 0.9,
+      "serviceA": 0.65,
+      "brakeCurve": [],
+      "tractionCurve": []
+    },
+    "alignment": [
+      {
+        "fromM": 0,
+        "toM": 2000,
+        "gradientPermille": 0,
+        "speedKph": 80
+      },
+      {
+        "fromM": 2000,
+        "toM": 4000,
+        "gradientPermille": -18,
+        "speedKph": 90
+      },
+      {
+        "fromM": 4000,
+        "toM": 6500,
+        "gradientPermille": 12,
+        "speedKph": 90
+      },
+      {
+        "fromM": 6500,
+        "toM": 9000,
+        "gradientPermille": -25,
+        "speedKph": 80
+      },
+      {
+        "fromM": 9000,
+        "toM": 14000,
+        "gradientPermille": 0,
+        "speedKph": 80
+      }
+    ],
+    "scenario": {
+      "direction": 1,
+      "reactionS": 1,
+      "tractionDisableS": 0.8,
+      "brakeDelayS": 0.8,
+      "buildUpS": 1.2,
+      "overspeedKph": 3,
+      "speedErrorKph": 1,
+      "frontErrorM": 3,
+      "rearErrorM": 3,
+      "rollbackM": 0,
+      "extraM": 0,
+      "roundM": 5,
+      "obstacleM": null,
+      "dtS": 0.08,
+      "toleranceM": 0.05,
+      "maxTimeS": 600,
+      "method": "trajectory",
+      "constantGradePermille": 0
+    },
+    "study": {
+      "fromM": 1000,
+      "toM": 9000,
+      "spacingM": 500,
+      "speedsKph": [
+        20,
+        40,
+        60,
+        80
+      ]
+    }
+  },
+  "caseCount": 80,
+  "alignmentCompilation": {
+    "inputSegments": 5,
+    "effectiveSegments": 5
+  },
+  "results": [
+    {
+      "startM": 1000,
+      "speedKph": 20,
+      "distanceM": 56.52535802469118,
+      "timeS": 11.607407407407175,
+      "peakKph": 29.832000000000214,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 62.52535802469118,
+      "signedMarginM": 38.78366761633411,
+      "marginM": 38.78366761633411,
+      "selectedM": 40,
+      "selectionBasisM": 38.783667616334505,
+      "numericalDeltaM": 3.979039320256561e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 56.52535802469141
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 56.52535802469158,
+          "deltaM": 1.7053025658242404e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 56.52535802469118,
+          "deltaM": 3.979039320256561e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1000,
+      "speedKph": 40,
+      "distanceM": 138.15773113854308,
+      "timeS": 17.78024691357965,
+      "peakKph": 49.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 144.15773113854308,
+      "signedMarginM": 49.19096950511479,
+      "marginM": 49.19096950511479,
+      "selectedM": 50,
+      "selectionBasisM": 49.19096950511661,
+      "numericalDeltaM": 1.8189894035458565e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 138.15773113854664
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 138.1577311385449,
+          "deltaM": 1.7337242752546445e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 138.15773113854308,
+          "deltaM": 1.8189894035458565e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1000,
+      "speedKph": 60,
+      "distanceM": 254.08365706446688,
+      "timeS": 23.953086419752122,
+      "peakKph": 69.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 260.0836570644669,
+      "signedMarginM": 46.408443389253165,
+      "marginM": 46.408443389253165,
+      "selectedM": 50,
+      "selectionBasisM": 46.40844338925376,
+      "numericalDeltaM": 5.968558980384842e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 254.08365706447267
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 254.08365706446747,
+          "deltaM": 5.201172825763933e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 254.08365706446688,
+          "deltaM": 5.968558980384842e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1000,
+      "speedKph": 80,
+      "distanceM": 404.30313580245894,
+      "timeS": 30.125925925924594,
+      "peakKph": 89.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 410.30313580245894,
+      "signedMarginM": 30.436089268745775,
+      "marginM": 30.436089268745775,
+      "selectedM": 35,
+      "selectionBasisM": 30.436089268746514,
+      "numericalDeltaM": 7.389644451905042e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 404.30313580246514
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 404.3031358024597,
+          "deltaM": 5.4569682106375694e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 404.30313580245894,
+          "deltaM": 7.389644451905042e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1500,
+      "speedKph": 20,
+      "distanceM": 56.52535802469118,
+      "timeS": 11.607407407407175,
+      "peakKph": 29.832000000000214,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 62.52535802469118,
+      "signedMarginM": 38.78366761633411,
+      "marginM": 38.78366761633411,
+      "selectedM": 40,
+      "selectionBasisM": 38.783667616334505,
+      "numericalDeltaM": 3.979039320256561e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 56.52535802469141
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 56.52535802469158,
+          "deltaM": 1.7053025658242404e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 56.52535802469118,
+          "deltaM": 3.979039320256561e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1500,
+      "speedKph": 40,
+      "distanceM": 138.15773113854308,
+      "timeS": 17.78024691357965,
+      "peakKph": 49.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 144.15773113854308,
+      "signedMarginM": 49.19096950511479,
+      "marginM": 49.19096950511479,
+      "selectedM": 50,
+      "selectionBasisM": 49.19096950511661,
+      "numericalDeltaM": 1.8189894035458565e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 138.15773113854664
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 138.1577311385449,
+          "deltaM": 1.7337242752546445e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 138.15773113854308,
+          "deltaM": 1.8189894035458565e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1500,
+      "speedKph": 60,
+      "distanceM": 254.08365706446688,
+      "timeS": 23.953086419752122,
+      "peakKph": 69.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 260.0836570644669,
+      "signedMarginM": 46.408443389253165,
+      "marginM": 46.408443389253165,
+      "selectedM": 50,
+      "selectionBasisM": 46.40844338925376,
+      "numericalDeltaM": 5.968558980384842e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 254.08365706447267
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 254.08365706446747,
+          "deltaM": 5.201172825763933e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 254.08365706446688,
+          "deltaM": 5.968558980384842e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 1500,
+      "speedKph": 80,
+      "distanceM": 404.30313580245894,
+      "timeS": 30.125925925924594,
+      "peakKph": 89.83200000000022,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 410.30313580245894,
+      "signedMarginM": 30.436089268745775,
+      "marginM": 30.436089268745775,
+      "selectedM": 35,
+      "selectionBasisM": 30.436089268746514,
+      "numericalDeltaM": 7.389644451905042e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 404.30313580246514
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 404.3031358024597,
+          "deltaM": 5.4569682106375694e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 404.30313580245894,
+          "deltaM": 7.389644451905042e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2000,
+      "speedKph": 20,
+      "distanceM": 61.1648754332518,
+      "timeS": 12.866031065439815,
+      "peakKph": 29.926949043768875,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 67.16487543325181,
+      "signedMarginM": 43.423185024894735,
+      "marginM": 43.423185024894735,
+      "selectedM": 45,
+      "selectionBasisM": 43.4231850248972,
+      "numericalDeltaM": 2.4655832930875476e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 61.16487543329479
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 61.16487543325427,
+          "deltaM": 4.0522252220398514e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 61.1648754332518,
+          "deltaM": 2.4655832930875476e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2000,
+      "speedKph": 40,
+      "distanceM": 162.22176395050695,
+      "timeS": 21.37098682639025,
+      "peakKph": 50.00293215801093,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 168.22176395050695,
+      "signedMarginM": 73.25500231707866,
+      "marginM": 73.25500231707866,
+      "selectedM": 75,
+      "selectionBasisM": 73.25500231708122,
+      "numericalDeltaM": 2.5579538487363607e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 162.22176395054453
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 162.2217639505044,
+          "deltaM": 4.013145371573046e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 162.22176395050695,
+          "deltaM": 2.5579538487363607e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2000,
+      "speedKph": 60,
+      "distanceM": 306.4785702931166,
+      "timeS": 29.275857616423828,
+      "peakKph": 70.08169561771638,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 312.4785702931166,
+      "signedMarginM": 98.80335661790289,
+      "marginM": 98.80335661790289,
+      "selectedM": 100,
+      "selectionBasisM": 98.80335661791864,
+      "numericalDeltaM": 1.574562702444382e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 306.47857029313025
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 306.47857029310086,
+          "deltaM": 2.9388047551037744e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 306.4785702931166,
+          "deltaM": 1.574562702444382e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2000,
+      "speedKph": 80,
+      "distanceM": 493.3944206221782,
+      "timeS": 37.072353330929054,
+      "peakKph": 90.16320687411059,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 499.3944206221782,
+      "signedMarginM": 119.52737408846502,
+      "marginM": 119.52737408846502,
+      "selectedM": 120,
+      "selectionBasisM": 119.5273740884839,
+      "numericalDeltaM": 1.887201506178826e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 493.3944206221659
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 493.3944206221593,
+          "deltaM": 6.59383658785373e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 493.3944206221782,
+          "deltaM": 1.887201506178826e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2080,
+      "speedKph": 20,
+      "distanceM": 71.31514554665377,
+      "timeS": 14.438891936181133,
+      "peakKph": 31.05039071738889,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 77.31514554665377,
+      "signedMarginM": 53.573455138296694,
+      "marginM": 53.573455138296694,
+      "selectedM": 55,
+      "selectionBasisM": 53.573455138297035,
+      "numericalDeltaM": 3.410605131648481e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 71.31514554665533
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 71.31514554665411,
+          "deltaM": 1.2221335055073723e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 71.31514554665377,
+          "deltaM": 3.410605131648481e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2080,
+      "speedKph": 40,
+      "distanceM": 172.8607338520071,
+      "timeS": 22.11751985374265,
+      "peakKph": 51.050390717388886,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 178.8607338520071,
+      "signedMarginM": 83.8939722185788,
+      "marginM": 83.8939722185788,
+      "selectedM": 85,
+      "selectionBasisM": 83.89397221859113,
+      "numericalDeltaM": 1.233502189279534e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 172.86073385199765
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 172.86073385199475,
+          "deltaM": 2.8990143619012088e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 172.8607338520071,
+          "deltaM": 1.233502189279534e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2080,
+      "speedKph": 60,
+      "distanceM": 317.06536614382156,
+      "timeS": 29.796147771304604,
+      "peakKph": 71.05039071739003,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 323.06536614382156,
+      "signedMarginM": 109.39015246860785,
+      "marginM": 109.39015246860785,
+      "selectedM": 110,
+      "selectionBasisM": 109.3901524686311,
+      "numericalDeltaM": 2.3248958314070478e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 317.0653661437902
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 317.0653661437983,
+          "deltaM": 8.128608897095546e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 317.06536614382156,
+          "deltaM": 2.3248958314070478e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2080,
+      "speedKph": 80,
+      "distanceM": 503.9290424220876,
+      "timeS": 37.47477568886708,
+      "peakKph": 91.05039071739002,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 509.9290424220876,
+      "signedMarginM": 130.06199588837444,
+      "marginM": 130.06199588837444,
+      "selectedM": 135,
+      "selectionBasisM": 130.0619958884045,
+      "numericalDeltaM": 3.007016857736744e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 503.9290424220237
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 503.92904242205753,
+          "deltaM": 3.382183422218077e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 503.9290424220876,
+          "deltaM": 3.007016857736744e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2500,
+      "speedKph": 20,
+      "distanceM": 71.31514554665377,
+      "timeS": 14.438891936181133,
+      "peakKph": 31.05039071738889,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 77.31514554665377,
+      "signedMarginM": 53.573455138296694,
+      "marginM": 53.573455138296694,
+      "selectedM": 55,
+      "selectionBasisM": 53.573455138297035,
+      "numericalDeltaM": 3.410605131648481e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 71.31514554665533
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 71.31514554665411,
+          "deltaM": 1.2221335055073723e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 71.31514554665377,
+          "deltaM": 3.410605131648481e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2500,
+      "speedKph": 40,
+      "distanceM": 172.8607338520071,
+      "timeS": 22.11751985374265,
+      "peakKph": 51.050390717388886,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 178.8607338520071,
+      "signedMarginM": 83.8939722185788,
+      "marginM": 83.8939722185788,
+      "selectedM": 85,
+      "selectionBasisM": 83.89397221859113,
+      "numericalDeltaM": 1.233502189279534e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 172.86073385199765
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 172.86073385199475,
+          "deltaM": 2.8990143619012088e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 172.8607338520071,
+          "deltaM": 1.233502189279534e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2500,
+      "speedKph": 60,
+      "distanceM": 317.06536614382156,
+      "timeS": 29.796147771304604,
+      "peakKph": 71.05039071739003,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 323.06536614382156,
+      "signedMarginM": 109.39015246860785,
+      "marginM": 109.39015246860785,
+      "selectedM": 110,
+      "selectionBasisM": 109.3901524686311,
+      "numericalDeltaM": 2.3248958314070478e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 317.0653661437902
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 317.0653661437983,
+          "deltaM": 8.128608897095546e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 317.06536614382156,
+          "deltaM": 2.3248958314070478e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 2500,
+      "speedKph": 80,
+      "distanceM": 503.9290424220876,
+      "timeS": 37.47477568886708,
+      "peakKph": 91.05039071739002,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 509.9290424220876,
+      "signedMarginM": 130.06199588837444,
+      "marginM": 130.06199588837444,
+      "selectedM": 135,
+      "selectionBasisM": 130.0619958884045,
+      "numericalDeltaM": 3.007016857736744e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 503.9290424220237
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 503.92904242205753,
+          "deltaM": 3.382183422218077e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 503.9290424220876,
+          "deltaM": 3.007016857736744e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3000,
+      "speedKph": 20,
+      "distanceM": 71.31514554665377,
+      "timeS": 14.438891936181133,
+      "peakKph": 31.05039071738889,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 77.31514554665377,
+      "signedMarginM": 53.573455138296694,
+      "marginM": 53.573455138296694,
+      "selectedM": 55,
+      "selectionBasisM": 53.573455138297035,
+      "numericalDeltaM": 3.410605131648481e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 71.31514554665533
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 71.31514554665411,
+          "deltaM": 1.2221335055073723e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 71.31514554665377,
+          "deltaM": 3.410605131648481e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3000,
+      "speedKph": 40,
+      "distanceM": 172.8607338520071,
+      "timeS": 22.11751985374265,
+      "peakKph": 51.050390717388886,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 178.8607338520071,
+      "signedMarginM": 83.8939722185788,
+      "marginM": 83.8939722185788,
+      "selectedM": 85,
+      "selectionBasisM": 83.89397221859113,
+      "numericalDeltaM": 1.233502189279534e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 172.86073385199765
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 172.86073385199475,
+          "deltaM": 2.8990143619012088e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 172.8607338520071,
+          "deltaM": 1.233502189279534e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3000,
+      "speedKph": 60,
+      "distanceM": 317.06536614382156,
+      "timeS": 29.796147771304604,
+      "peakKph": 71.05039071739003,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 323.06536614382156,
+      "signedMarginM": 109.39015246860785,
+      "marginM": 109.39015246860785,
+      "selectedM": 110,
+      "selectionBasisM": 109.3901524686311,
+      "numericalDeltaM": 2.3248958314070478e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 317.0653661437902
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 317.0653661437983,
+          "deltaM": 8.128608897095546e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 317.06536614382156,
+          "deltaM": 2.3248958314070478e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3000,
+      "speedKph": 80,
+      "distanceM": 503.9290424220876,
+      "timeS": 37.47477568886708,
+      "peakKph": 91.05039071739002,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 509.9290424220876,
+      "signedMarginM": 130.06199588837444,
+      "marginM": 130.06199588837444,
+      "selectedM": 135,
+      "selectionBasisM": 130.0619958884045,
+      "numericalDeltaM": 3.007016857736744e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 503.9290424220237
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 503.92904242205753,
+          "deltaM": 3.382183422218077e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 503.9290424220876,
+          "deltaM": 3.007016857736744e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3500,
+      "speedKph": 20,
+      "distanceM": 71.31514554665377,
+      "timeS": 14.438891936181133,
+      "peakKph": 31.05039071738889,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 77.31514554665377,
+      "signedMarginM": 53.573455138296694,
+      "marginM": 53.573455138296694,
+      "selectedM": 55,
+      "selectionBasisM": 53.573455138297035,
+      "numericalDeltaM": 3.410605131648481e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 71.31514554665533
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 71.31514554665411,
+          "deltaM": 1.2221335055073723e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 71.31514554665377,
+          "deltaM": 3.410605131648481e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3500,
+      "speedKph": 40,
+      "distanceM": 172.8607338520071,
+      "timeS": 22.11751985374265,
+      "peakKph": 51.050390717388886,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 178.8607338520071,
+      "signedMarginM": 83.8939722185788,
+      "marginM": 83.8939722185788,
+      "selectedM": 85,
+      "selectionBasisM": 83.89397221859113,
+      "numericalDeltaM": 1.233502189279534e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 172.86073385199765
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 172.86073385199475,
+          "deltaM": 2.8990143619012088e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 172.8607338520071,
+          "deltaM": 1.233502189279534e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3500,
+      "speedKph": 60,
+      "distanceM": 317.06536614382156,
+      "timeS": 29.796147771304604,
+      "peakKph": 71.05039071739003,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 323.06536614382156,
+      "signedMarginM": 109.39015246860785,
+      "marginM": 109.39015246860785,
+      "selectedM": 110,
+      "selectionBasisM": 109.3901524686311,
+      "numericalDeltaM": 2.3248958314070478e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 317.0653661437902
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 317.0653661437983,
+          "deltaM": 8.128608897095546e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 317.06536614382156,
+          "deltaM": 2.3248958314070478e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 3500,
+      "speedKph": 80,
+      "distanceM": 503.8905786596278,
+      "timeS": 37.43192607581513,
+      "peakKph": 91.05039071739002,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 509.8905786596278,
+      "signedMarginM": 130.02353212591464,
+      "marginM": 130.02353212591464,
+      "selectedM": 135,
+      "selectionBasisM": 130.0235321259438,
+      "numericalDeltaM": 2.916067387559451e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 503.89057865956516
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 503.89057865959865,
+          "deltaM": 3.348077370901592e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 503.8905786596278,
+          "deltaM": 2.916067387559451e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4000,
+      "speedKph": 20,
+      "distanceM": 61.568657439002486,
+      "timeS": 12.022861149170144,
+      "peakKph": 30.85559112954701,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 67.5686574390025,
+      "signedMarginM": 43.82696703064542,
+      "marginM": 43.82696703064542,
+      "selectedM": 45,
+      "selectionBasisM": 43.82696703064962,
+      "numericalDeltaM": 4.199307568342192e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 61.568657438933634
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 61.56865743899829,
+          "deltaM": 6.465228352681152e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 61.568657439002486,
+          "deltaM": 4.199307568342192e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4000,
+      "speedKph": 40,
+      "distanceM": 134.31404351343056,
+      "timeS": 16.600743869788264,
+      "peakKph": 50.71779824819969,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 140.31404351343056,
+      "signedMarginM": 45.34728188000227,
+      "marginM": 45.34728188000227,
+      "selectedM": 50,
+      "selectionBasisM": 45.347281880005255,
+      "numericalDeltaM": 2.9842794901924208e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 134.31404351335806
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 134.31404351342758,
+          "deltaM": 6.95195012667682e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 134.31404351343056,
+          "deltaM": 2.9842794901924208e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4000,
+      "speedKph": 60,
+      "distanceM": 236.7739617932786,
+      "timeS": 21.797160386995916,
+      "peakKph": 70.58700961315238,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 242.7739617932786,
+      "signedMarginM": 29.09874811806489,
+      "marginM": 29.09874811806489,
+      "selectedM": 30,
+      "selectionBasisM": 29.09874811806739,
+      "numericalDeltaM": 2.5011104298755527e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 236.7739617932056
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 236.7739617932811,
+          "deltaM": 7.551648195658345e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 236.7739617932786,
+          "deltaM": 2.5011104298755527e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4000,
+      "speedKph": 80,
+      "distanceM": 369.5621370285885,
+      "timeS": 27.118088691242793,
+      "peakKph": 90.46248837855556,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 375.5621370285885,
+      "signedMarginM": -4.3049095051246695,
+      "marginM": 0,
+      "selectedM": 0,
+      "selectionBasisM": 2.1032064978498966e-12,
+      "numericalDeltaM": 2.1032064978498966e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 369.56213702851835
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 369.5621370285906,
+          "deltaM": 7.224798537208699e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 369.5621370285885,
+          "deltaM": 2.1032064978498966e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4080,
+      "speedKph": 20,
+      "distanceM": 49.514904967189096,
+      "timeS": 10.265265788230076,
+      "peakKph": 29.069489794758482,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 55.514904967189096,
+      "signedMarginM": 31.773214558832024,
+      "marginM": 31.773214558832024,
+      "selectedM": 35,
+      "selectionBasisM": 31.77321455883221,
+      "numericalDeltaM": 1.8474111129762605e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 49.51490496718851
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 49.51490496718891,
+          "deltaM": 4.050093593832571e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 49.514904967189096,
+          "deltaM": 1.8474111129762605e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4080,
+      "speedKph": 40,
+      "distanceM": 121.70828782397427,
+      "timeS": 15.72435204021335,
+      "peakKph": 49.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 127.70828782397427,
+      "signedMarginM": 32.74152619054598,
+      "marginM": 32.74152619054598,
+      "selectedM": 35,
+      "selectionBasisM": 32.7415261905503,
+      "numericalDeltaM": 4.320099833421409e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 121.7082878239781
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 121.7082878239786,
+          "deltaM": 4.973799150320701e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 121.70828782397427,
+          "deltaM": 4.320099833421409e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4080,
+      "speedKph": 60,
+      "distanceM": 224.22992763622187,
+      "timeS": 21.18343829219648,
+      "peakKph": 69.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 230.22992763622187,
+      "signedMarginM": 16.55471396100816,
+      "marginM": 16.55471396100816,
+      "selectedM": 20,
+      "selectionBasisM": 16.554713961016347,
+      "numericalDeltaM": 8.185452315956354e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 224.22992763623316
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 224.22992763623006,
+          "deltaM": 3.097966327914037e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 224.22992763622187,
+          "deltaM": 8.185452315956354e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4080,
+      "speedKph": 80,
+      "distanceM": 357.07982440393226,
+      "timeS": 26.642524544179683,
+      "peakKph": 89.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 363.07982440393226,
+      "signedMarginM": -16.7872221297809,
+      "marginM": 0,
+      "selectedM": 5,
+      "selectionBasisM": 8.01492205937393e-12,
+      "numericalDeltaM": 8.01492205937393e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 357.0798244039536
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 357.0798244039403,
+          "deltaM": 1.3301360013429075e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 357.07982440393226,
+          "deltaM": 8.01492205937393e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4500,
+      "speedKph": 20,
+      "distanceM": 49.514904967189096,
+      "timeS": 10.265265788230076,
+      "peakKph": 29.069489794758482,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 55.514904967189096,
+      "signedMarginM": 31.773214558832024,
+      "marginM": 31.773214558832024,
+      "selectedM": 35,
+      "selectionBasisM": 31.77321455883221,
+      "numericalDeltaM": 1.8474111129762605e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 49.51490496718851
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 49.51490496718891,
+          "deltaM": 4.050093593832571e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 49.514904967189096,
+          "deltaM": 1.8474111129762605e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4500,
+      "speedKph": 40,
+      "distanceM": 121.70828782397427,
+      "timeS": 15.72435204021335,
+      "peakKph": 49.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 127.70828782397427,
+      "signedMarginM": 32.74152619054598,
+      "marginM": 32.74152619054598,
+      "selectedM": 35,
+      "selectionBasisM": 32.7415261905503,
+      "numericalDeltaM": 4.320099833421409e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 121.7082878239781
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 121.7082878239786,
+          "deltaM": 4.973799150320701e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 121.70828782397427,
+          "deltaM": 4.320099833421409e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4500,
+      "speedKph": 60,
+      "distanceM": 224.22992763622187,
+      "timeS": 21.18343829219648,
+      "peakKph": 69.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 230.22992763622187,
+      "signedMarginM": 16.55471396100816,
+      "marginM": 16.55471396100816,
+      "selectedM": 20,
+      "selectionBasisM": 16.554713961016347,
+      "numericalDeltaM": 8.185452315956354e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 224.22992763623316
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 224.22992763623006,
+          "deltaM": 3.097966327914037e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 224.22992763622187,
+          "deltaM": 8.185452315956354e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 4500,
+      "speedKph": 80,
+      "distanceM": 357.07982440393226,
+      "timeS": 26.642524544179683,
+      "peakKph": 89.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 363.07982440393226,
+      "signedMarginM": -16.7872221297809,
+      "marginM": 0,
+      "selectedM": 5,
+      "selectionBasisM": 8.01492205937393e-12,
+      "numericalDeltaM": 8.01492205937393e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 357.0798244039536
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 357.0798244039403,
+          "deltaM": 1.3301360013429075e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 357.07982440393226,
+          "deltaM": 8.01492205937393e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5000,
+      "speedKph": 20,
+      "distanceM": 49.514904967189096,
+      "timeS": 10.265265788230076,
+      "peakKph": 29.069489794758482,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 55.514904967189096,
+      "signedMarginM": 31.773214558832024,
+      "marginM": 31.773214558832024,
+      "selectedM": 35,
+      "selectionBasisM": 31.77321455883221,
+      "numericalDeltaM": 1.8474111129762605e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 49.51490496718851
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 49.51490496718891,
+          "deltaM": 4.050093593832571e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 49.514904967189096,
+          "deltaM": 1.8474111129762605e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5000,
+      "speedKph": 40,
+      "distanceM": 121.70828782397427,
+      "timeS": 15.72435204021335,
+      "peakKph": 49.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 127.70828782397427,
+      "signedMarginM": 32.74152619054598,
+      "marginM": 32.74152619054598,
+      "selectedM": 35,
+      "selectionBasisM": 32.7415261905503,
+      "numericalDeltaM": 4.320099833421409e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 121.7082878239781
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 121.7082878239786,
+          "deltaM": 4.973799150320701e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 121.70828782397427,
+          "deltaM": 4.320099833421409e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5000,
+      "speedKph": 60,
+      "distanceM": 224.22992763622187,
+      "timeS": 21.18343829219648,
+      "peakKph": 69.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 230.22992763622187,
+      "signedMarginM": 16.55471396100816,
+      "marginM": 16.55471396100816,
+      "selectedM": 20,
+      "selectionBasisM": 16.554713961016347,
+      "numericalDeltaM": 8.185452315956354e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 224.22992763623316
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 224.22992763623006,
+          "deltaM": 3.097966327914037e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 224.22992763622187,
+          "deltaM": 8.185452315956354e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5000,
+      "speedKph": 80,
+      "distanceM": 357.07982440393226,
+      "timeS": 26.642524544179683,
+      "peakKph": 89.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 363.07982440393226,
+      "signedMarginM": -16.7872221297809,
+      "marginM": 0,
+      "selectedM": 5,
+      "selectionBasisM": 8.01492205937393e-12,
+      "numericalDeltaM": 8.01492205937393e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 357.0798244039536
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 357.0798244039403,
+          "deltaM": 1.3301360013429075e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 357.07982440393226,
+          "deltaM": 8.01492205937393e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5500,
+      "speedKph": 20,
+      "distanceM": 49.514904967189096,
+      "timeS": 10.265265788230076,
+      "peakKph": 29.069489794758482,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 55.514904967189096,
+      "signedMarginM": 31.773214558832024,
+      "marginM": 31.773214558832024,
+      "selectedM": 35,
+      "selectionBasisM": 31.77321455883221,
+      "numericalDeltaM": 1.8474111129762605e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 49.51490496718851
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 49.51490496718891,
+          "deltaM": 4.050093593832571e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 49.514904967189096,
+          "deltaM": 1.8474111129762605e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5500,
+      "speedKph": 40,
+      "distanceM": 121.70828782397427,
+      "timeS": 15.72435204021335,
+      "peakKph": 49.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 127.70828782397427,
+      "signedMarginM": 32.74152619054598,
+      "marginM": 32.74152619054598,
+      "selectedM": 35,
+      "selectionBasisM": 32.7415261905503,
+      "numericalDeltaM": 4.320099833421409e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 121.7082878239781
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 121.7082878239786,
+          "deltaM": 4.973799150320701e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 121.70828782397427,
+          "deltaM": 4.320099833421409e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5500,
+      "speedKph": 60,
+      "distanceM": 224.22992763622187,
+      "timeS": 21.18343829219648,
+      "peakKph": 69.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 230.22992763622187,
+      "signedMarginM": 16.55471396100816,
+      "marginM": 16.55471396100816,
+      "selectedM": 20,
+      "selectionBasisM": 16.554713961016347,
+      "numericalDeltaM": 8.185452315956354e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 224.22992763623316
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 224.22992763623006,
+          "deltaM": 3.097966327914037e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 224.22992763622187,
+          "deltaM": 8.185452315956354e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 5500,
+      "speedKph": 80,
+      "distanceM": 357.07982440393226,
+      "timeS": 26.642524544179683,
+      "peakKph": 89.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 363.07982440393226,
+      "signedMarginM": -16.7872221297809,
+      "marginM": 0,
+      "selectedM": 5,
+      "selectionBasisM": 8.01492205937393e-12,
+      "numericalDeltaM": 8.01492205937393e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 357.0798244039536
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 357.0798244039403,
+          "deltaM": 1.3301360013429075e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 357.07982440393226,
+          "deltaM": 8.01492205937393e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6000,
+      "speedKph": 20,
+      "distanceM": 49.514904967189096,
+      "timeS": 10.265265788230076,
+      "peakKph": 29.069489794758482,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 55.514904967189096,
+      "signedMarginM": 31.773214558832024,
+      "marginM": 31.773214558832024,
+      "selectedM": 35,
+      "selectionBasisM": 31.77321455883221,
+      "numericalDeltaM": 1.8474111129762605e-13,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 49.51490496718851
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 49.51490496718891,
+          "deltaM": 4.050093593832571e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 49.514904967189096,
+          "deltaM": 1.8474111129762605e-13
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6000,
+      "speedKph": 40,
+      "distanceM": 121.70828782397427,
+      "timeS": 15.72435204021335,
+      "peakKph": 49.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 127.70828782397427,
+      "signedMarginM": 32.74152619054598,
+      "marginM": 32.74152619054598,
+      "selectedM": 35,
+      "selectionBasisM": 32.7415261905503,
+      "numericalDeltaM": 4.320099833421409e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 121.7082878239781
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 121.7082878239786,
+          "deltaM": 4.973799150320701e-13
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 121.70828782397427,
+          "deltaM": 4.320099833421409e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6000,
+      "speedKph": 60,
+      "distanceM": 224.22992763622187,
+      "timeS": 21.18343829219648,
+      "peakKph": 69.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 230.22992763622187,
+      "signedMarginM": 16.55471396100816,
+      "marginM": 16.55471396100816,
+      "selectedM": 20,
+      "selectionBasisM": 16.554713961016347,
+      "numericalDeltaM": 8.185452315956354e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 224.22992763623316
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 224.22992763623006,
+          "deltaM": 3.097966327914037e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 224.22992763622187,
+          "deltaM": 8.185452315956354e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6000,
+      "speedKph": 80,
+      "distanceM": 357.07982440393226,
+      "timeS": 26.642524544179683,
+      "peakKph": 89.06948979475848,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 363.07982440393226,
+      "signedMarginM": -16.7872221297809,
+      "marginM": 0,
+      "selectedM": 5,
+      "selectionBasisM": 8.01492205937393e-12,
+      "numericalDeltaM": 8.01492205937393e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 357.0798244039536
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 357.0798244039403,
+          "deltaM": 1.3301360013429075e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 357.07982440393226,
+          "deltaM": 8.01492205937393e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6500,
+      "speedKph": 20,
+      "distanceM": 56.80045309175925,
+      "timeS": 12.304870586687327,
+      "peakKph": 29.258430056708942,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 62.80045309175925,
+      "signedMarginM": 39.05876268340218,
+      "marginM": 39.05876268340218,
+      "selectedM": 40,
+      "selectionBasisM": 39.058762683407735,
+      "numericalDeltaM": 5.5564441936439835e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 56.80045309184842
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 56.80045309176481,
+          "deltaM": 8.360956371689099e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 56.80045309175925,
+          "deltaM": 5.5564441936439835e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6500,
+      "speedKph": 40,
+      "distanceM": 167.23770141373276,
+      "timeS": 22.718377200883044,
+      "peakKph": 49.405528224240314,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 173.23770141373276,
+      "signedMarginM": 78.27093978030447,
+      "marginM": 78.27093978030447,
+      "selectedM": 80,
+      "selectionBasisM": 78.27093978030899,
+      "numericalDeltaM": 4.519051799434237e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 167.23770141381272
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 167.23770141373728,
+          "deltaM": 7.543121682829224e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 167.23770141373276,
+          "deltaM": 4.519051799434237e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6500,
+      "speedKph": 60,
+      "distanceM": 326.6655923758664,
+      "timeS": 31.729252732095734,
+      "peakKph": 69.55557930355768,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 332.6655923758664,
+      "signedMarginM": 118.99037870065271,
+      "marginM": 118.99037870065271,
+      "selectedM": 120,
+      "selectionBasisM": 118.99037870067022,
+      "numericalDeltaM": 1.750777300912887e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 326.66559237593754
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 326.66559237588393,
+          "deltaM": 5.360334398574196e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 326.6655923758664,
+          "deltaM": 1.750777300912887e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6500,
+      "speedKph": 80,
+      "distanceM": 533.2208474746403,
+      "timeS": 40.48336198642629,
+      "peakKph": 89.71734089892361,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 539.2208474746403,
+      "signedMarginM": 159.35380094092716,
+      "marginM": 159.35380094092716,
+      "selectedM": 160,
+      "selectionBasisM": 159.35380094099833,
+      "numericalDeltaM": 7.116796041373163e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 533.2208474747453
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 533.2208474747115,
+          "deltaM": 3.376499080331996e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 533.2208474746403,
+          "deltaM": 7.116796041373163e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6580,
+      "speedKph": 20,
+      "distanceM": 79.21492145036586,
+      "timeS": 15.951293194070969,
+      "peakKph": 31.564284372439438,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 85.21492145036586,
+      "signedMarginM": 61.47323104200879,
+      "marginM": 61.47323104200879,
+      "selectedM": 65,
+      "selectionBasisM": 61.47323104200983,
+      "numericalDeltaM": 1.0373923942097463e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 79.21492145036356
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 79.21492145036483,
+          "deltaM": 1.2647660696529783e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 79.21492145036586,
+          "deltaM": 1.0373923942097463e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6580,
+      "speedKph": 40,
+      "distanceM": 191.3968990413283,
+      "timeS": 24.434218738673923,
+      "peakKph": 51.56428437243979,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 197.3968990413283,
+      "signedMarginM": 102.43013740790002,
+      "marginM": 102.43013740790002,
+      "selectedM": 105,
+      "selectionBasisM": 102.43013740790383,
+      "numericalDeltaM": 3.808509063674137e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 191.39689904132314
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 191.3968990413245,
+          "deltaM": 1.3642420526593924e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 191.3968990413283,
+          "deltaM": 3.808509063674137e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6580,
+      "speedKph": 60,
+      "distanceM": 350.7062407689358,
+      "timeS": 32.917144283274844,
+      "peakKph": 71.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 356.7062407689358,
+      "signedMarginM": 143.0310270937221,
+      "marginM": 143.0310270937221,
+      "selectedM": 145,
+      "selectionBasisM": 143.03102709375807,
+      "numericalDeltaM": 3.5981884138891473e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 350.70624076896587
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 350.7062407689718,
+          "deltaM": 5.9117155615240335e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 350.7062407689358,
+          "deltaM": 3.5981884138891473e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 6580,
+      "speedKph": 80,
+      "distanceM": 557.1429466332086,
+      "timeS": 41.400069827876834,
+      "peakKph": 91.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 563.1429466332086,
+      "signedMarginM": 183.2759000994954,
+      "marginM": 183.2759000994954,
+      "selectedM": 185,
+      "selectionBasisM": 183.27590009958567,
+      "numericalDeltaM": 9.026734915096313e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 557.1429466332914
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 557.1429466332988,
+          "deltaM": 7.389644451905042e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 557.1429466332086,
+          "deltaM": 9.026734915096313e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7000,
+      "speedKph": 20,
+      "distanceM": 79.21492145036586,
+      "timeS": 15.951293194070969,
+      "peakKph": 31.564284372439438,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 85.21492145036586,
+      "signedMarginM": 61.47323104200879,
+      "marginM": 61.47323104200879,
+      "selectedM": 65,
+      "selectionBasisM": 61.47323104200983,
+      "numericalDeltaM": 1.0373923942097463e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 79.21492145036356
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 79.21492145036483,
+          "deltaM": 1.2647660696529783e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 79.21492145036586,
+          "deltaM": 1.0373923942097463e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7000,
+      "speedKph": 40,
+      "distanceM": 191.3968990413283,
+      "timeS": 24.434218738673923,
+      "peakKph": 51.56428437243979,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 197.3968990413283,
+      "signedMarginM": 102.43013740790002,
+      "marginM": 102.43013740790002,
+      "selectedM": 105,
+      "selectionBasisM": 102.43013740790383,
+      "numericalDeltaM": 3.808509063674137e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 191.39689904132314
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 191.3968990413245,
+          "deltaM": 1.3642420526593924e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 191.3968990413283,
+          "deltaM": 3.808509063674137e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7000,
+      "speedKph": 60,
+      "distanceM": 350.7062407689358,
+      "timeS": 32.917144283274844,
+      "peakKph": 71.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 356.7062407689358,
+      "signedMarginM": 143.0310270937221,
+      "marginM": 143.0310270937221,
+      "selectedM": 145,
+      "selectionBasisM": 143.03102709375807,
+      "numericalDeltaM": 3.5981884138891473e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 350.70624076896587
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 350.7062407689718,
+          "deltaM": 5.9117155615240335e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 350.7062407689358,
+          "deltaM": 3.5981884138891473e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7000,
+      "speedKph": 80,
+      "distanceM": 557.1429466332086,
+      "timeS": 41.400069827876834,
+      "peakKph": 91.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 563.1429466332086,
+      "signedMarginM": 183.2759000994954,
+      "marginM": 183.2759000994954,
+      "selectedM": 185,
+      "selectionBasisM": 183.27590009958567,
+      "numericalDeltaM": 9.026734915096313e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 557.1429466332914
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 557.1429466332988,
+          "deltaM": 7.389644451905042e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 557.1429466332086,
+          "deltaM": 9.026734915096313e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7500,
+      "speedKph": 20,
+      "distanceM": 79.21492145036586,
+      "timeS": 15.951293194070969,
+      "peakKph": 31.564284372439438,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 85.21492145036586,
+      "signedMarginM": 61.47323104200879,
+      "marginM": 61.47323104200879,
+      "selectedM": 65,
+      "selectionBasisM": 61.47323104200983,
+      "numericalDeltaM": 1.0373923942097463e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 79.21492145036356
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 79.21492145036483,
+          "deltaM": 1.2647660696529783e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 79.21492145036586,
+          "deltaM": 1.0373923942097463e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7500,
+      "speedKph": 40,
+      "distanceM": 191.3968990413283,
+      "timeS": 24.434218738673923,
+      "peakKph": 51.56428437243979,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 197.3968990413283,
+      "signedMarginM": 102.43013740790002,
+      "marginM": 102.43013740790002,
+      "selectedM": 105,
+      "selectionBasisM": 102.43013740790383,
+      "numericalDeltaM": 3.808509063674137e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 191.39689904132314
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 191.3968990413245,
+          "deltaM": 1.3642420526593924e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 191.3968990413283,
+          "deltaM": 3.808509063674137e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7500,
+      "speedKph": 60,
+      "distanceM": 350.7062407689358,
+      "timeS": 32.917144283274844,
+      "peakKph": 71.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 356.7062407689358,
+      "signedMarginM": 143.0310270937221,
+      "marginM": 143.0310270937221,
+      "selectedM": 145,
+      "selectionBasisM": 143.03102709375807,
+      "numericalDeltaM": 3.5981884138891473e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 350.70624076896587
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 350.7062407689718,
+          "deltaM": 5.9117155615240335e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 350.7062407689358,
+          "deltaM": 3.5981884138891473e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 7500,
+      "speedKph": 80,
+      "distanceM": 557.1429466332086,
+      "timeS": 41.400069827876834,
+      "peakKph": 91.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 563.1429466332086,
+      "signedMarginM": 183.2759000994954,
+      "marginM": 183.2759000994954,
+      "selectedM": 185,
+      "selectionBasisM": 183.27590009958567,
+      "numericalDeltaM": 9.026734915096313e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 557.1429466332914
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 557.1429466332988,
+          "deltaM": 7.389644451905042e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 557.1429466332086,
+          "deltaM": 9.026734915096313e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8000,
+      "speedKph": 20,
+      "distanceM": 79.21492145036586,
+      "timeS": 15.951293194070969,
+      "peakKph": 31.564284372439438,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 85.21492145036586,
+      "signedMarginM": 61.47323104200879,
+      "marginM": 61.47323104200879,
+      "selectedM": 65,
+      "selectionBasisM": 61.47323104200983,
+      "numericalDeltaM": 1.0373923942097463e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 79.21492145036356
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 79.21492145036483,
+          "deltaM": 1.2647660696529783e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 79.21492145036586,
+          "deltaM": 1.0373923942097463e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8000,
+      "speedKph": 40,
+      "distanceM": 191.3968990413283,
+      "timeS": 24.434218738673923,
+      "peakKph": 51.56428437243979,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 197.3968990413283,
+      "signedMarginM": 102.43013740790002,
+      "marginM": 102.43013740790002,
+      "selectedM": 105,
+      "selectionBasisM": 102.43013740790383,
+      "numericalDeltaM": 3.808509063674137e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 191.39689904132314
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 191.3968990413245,
+          "deltaM": 1.3642420526593924e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 191.3968990413283,
+          "deltaM": 3.808509063674137e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8000,
+      "speedKph": 60,
+      "distanceM": 350.7062407689358,
+      "timeS": 32.917144283274844,
+      "peakKph": 71.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 356.7062407689358,
+      "signedMarginM": 143.0310270937221,
+      "marginM": 143.0310270937221,
+      "selectedM": 145,
+      "selectionBasisM": 143.03102709375807,
+      "numericalDeltaM": 3.5981884138891473e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 350.70624076896587
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 350.7062407689718,
+          "deltaM": 5.9117155615240335e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 350.7062407689358,
+          "deltaM": 3.5981884138891473e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8000,
+      "speedKph": 80,
+      "distanceM": 557.1429466332086,
+      "timeS": 41.400069827876834,
+      "peakKph": 91.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 563.1429466332086,
+      "signedMarginM": 183.2759000994954,
+      "marginM": 183.2759000994954,
+      "selectedM": 185,
+      "selectionBasisM": 183.27590009958567,
+      "numericalDeltaM": 9.026734915096313e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 557.1429466332914
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 557.1429466332988,
+          "deltaM": 7.389644451905042e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 557.1429466332086,
+          "deltaM": 9.026734915096313e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8500,
+      "speedKph": 20,
+      "distanceM": 79.21492145036586,
+      "timeS": 15.951293194070969,
+      "peakKph": 31.564284372439438,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 85.21492145036586,
+      "signedMarginM": 61.47323104200879,
+      "marginM": 61.47323104200879,
+      "selectedM": 65,
+      "selectionBasisM": 61.47323104200983,
+      "numericalDeltaM": 1.0373923942097463e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 79.21492145036356
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 79.21492145036483,
+          "deltaM": 1.2647660696529783e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 79.21492145036586,
+          "deltaM": 1.0373923942097463e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8500,
+      "speedKph": 40,
+      "distanceM": 191.3968990413283,
+      "timeS": 24.434218738673923,
+      "peakKph": 51.56428437243979,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 197.3968990413283,
+      "signedMarginM": 102.43013740790002,
+      "marginM": 102.43013740790002,
+      "selectedM": 105,
+      "selectionBasisM": 102.43013740790383,
+      "numericalDeltaM": 3.808509063674137e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 191.39689904132314
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 191.3968990413245,
+          "deltaM": 1.3642420526593924e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 191.3968990413283,
+          "deltaM": 3.808509063674137e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8500,
+      "speedKph": 60,
+      "distanceM": 350.7062407689358,
+      "timeS": 32.917144283274844,
+      "peakKph": 71.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 356.7062407689358,
+      "signedMarginM": 143.0310270937221,
+      "marginM": 143.0310270937221,
+      "selectedM": 145,
+      "selectionBasisM": 143.03102709375807,
+      "numericalDeltaM": 3.5981884138891473e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 350.70624076896587
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 350.7062407689718,
+          "deltaM": 5.9117155615240335e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 350.7062407689358,
+          "deltaM": 3.5981884138891473e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 8500,
+      "speedKph": 80,
+      "distanceM": 551.0478782912912,
+      "timeS": 39.596418547403644,
+      "peakKph": 91.56428437243869,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 557.0478782912912,
+      "signedMarginM": 177.18083175757806,
+      "marginM": 177.18083175757806,
+      "selectedM": 180,
+      "selectionBasisM": 177.18083175765128,
+      "numericalDeltaM": 7.321432349272072e-11,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 551.0478782913589
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 551.0478782913644,
+          "deltaM": 5.5706550483591855e-12
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 551.0478782912912,
+          "deltaM": 7.321432349272072e-11
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 9000,
+      "speedKph": 20,
+      "distanceM": 68.22305361217512,
+      "timeS": 13.23317548814432,
+      "peakKph": 31.384126772867955,
+      "firstStopBeforeFull": false,
+      "serviceM": 23.741690408357073,
+      "allowanceM": 6,
+      "protectedM": 74.22305361217512,
+      "signedMarginM": 50.48136320381805,
+      "marginM": 50.48136320381805,
+      "selectedM": 55,
+      "selectionBasisM": 50.48136320382147,
+      "numericalDeltaM": 3.424815986363683e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 68.22305361211883
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 68.2230536121717,
+          "deltaM": 5.2864379540551454e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 68.22305361217512,
+          "deltaM": 3.424815986363683e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 9000,
+      "speedKph": 40,
+      "distanceM": 150.03333105503654,
+      "timeS": 18.595033344180283,
+      "peakKph": 51.256900941648524,
+      "firstStopBeforeFull": false,
+      "serviceM": 94.96676163342829,
+      "allowanceM": 6,
+      "protectedM": 156.03333105503654,
+      "signedMarginM": 61.06656942160825,
+      "marginM": 61.06656942160825,
+      "selectedM": 65,
+      "selectionBasisM": 61.06656942161135,
+      "numericalDeltaM": 3.097966327914037e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 150.03333105497782
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 150.03333105503344,
+          "deltaM": 5.562128535530064e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 150.03333105503654,
+          "deltaM": 3.097966327914037e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 9000,
+      "speedKph": 60,
+      "distanceM": 265.90109831457653,
+      "timeS": 24.527844530412295,
+      "peakKph": 71.13498485940178,
+      "firstStopBeforeFull": false,
+      "serviceM": 213.6752136752137,
+      "allowanceM": 6,
+      "protectedM": 271.90109831457653,
+      "signedMarginM": 58.22588463936282,
+      "marginM": 58.22588463936282,
+      "selectedM": 60,
+      "selectionBasisM": 58.225884639368104,
+      "numericalDeltaM": 5.286437954055145e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 265.9010983145128
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 265.90109831457124,
+          "deltaM": 5.843503458891064e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 265.90109831457653,
+          "deltaM": 5.286437954055145e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    },
+    {
+      "startM": 9000,
+      "speedKph": 80,
+      "distanceM": 416.0624183861839,
+      "timeS": 30.572388739863435,
+      "peakKph": 91.01808621652071,
+      "firstStopBeforeFull": false,
+      "serviceM": 379.86704653371316,
+      "allowanceM": 6,
+      "protectedM": 422.0624183861839,
+      "signedMarginM": 42.195371852470714,
+      "marginM": 42.195371852470714,
+      "selectedM": 45,
+      "selectionBasisM": 42.195371852473386,
+      "numericalDeltaM": 2.6716406864579767e-12,
+      "refinement": [
+        {
+          "stepS": 0.08,
+          "distanceM": 416.06241838611425
+        },
+        {
+          "stepS": 0.04,
+          "distanceM": 416.0624183861812,
+          "deltaM": 6.696154741803184e-11
+        },
+        {
+          "stepS": 0.02,
+          "distanceM": 416.0624183861839,
+          "deltaM": 2.6716406864579767e-12
+        }
+      ],
+      "usedStepS": 0.02,
+      "availableM": null,
+      "residualM": null
+    }
+  ],
+  "failures": [],
+  "governing": {
+    "startM": 6580,
+    "speedKph": 80,
+    "distanceM": 557.1429466332086,
+    "timeS": 41.400069827876834,
+    "peakKph": 91.56428437243869,
+    "points": [
+      {
+        "t": 0,
+        "d": 0,
+        "v": 84,
+        "frontM": 6580,
+        "phase": "initial"
+      },
+      {
+        "t": 0.1,
+        "d": 2.339058781690539,
+        "v": 84.4122322817188,
+        "frontM": 6582.33905878169,
+        "phase": "traction"
+      },
+      {
+        "t": 0.19999999999999998,
+        "d": 4.689568460095489,
+        "v": 84.8244645634376,
+        "frontM": 6584.689568460096,
+        "phase": "traction"
+      },
+      {
+        "t": 0.3,
+        "d": 7.05152903521485,
+        "v": 85.2366968451564,
+        "frontM": 6587.051529035215,
+        "phase": "traction"
+      },
+      {
+        "t": 0.4000000000000001,
+        "d": 9.42494050704862,
+        "v": 85.6489291268752,
+        "frontM": 6589.424940507049,
+        "phase": "traction"
+      },
+      {
+        "t": 0.5000000000000001,
+        "d": 11.809802875596803,
+        "v": 86.061161408594,
+        "frontM": 6591.809802875597,
+        "phase": "traction"
+      },
+      {
+        "t": 0.6000000000000002,
+        "d": 14.206116140859399,
+        "v": 86.4733936903128,
+        "frontM": 6594.206116140859,
+        "phase": "traction"
+      },
+      {
+        "t": 0.7000000000000003,
+        "d": 16.613880302836407,
+        "v": 86.8856259720316,
+        "frontM": 6596.613880302836,
+        "phase": "traction"
+      },
+      {
+        "t": 0.8000000000000004,
+        "d": 19.033095361527824,
+        "v": 87.2978582537504,
+        "frontM": 6599.033095361528,
+        "phase": "traction"
+      },
+      {
+        "t": 0.9000000000000005,
+        "d": 21.463761316933653,
+        "v": 87.7100905354692,
+        "frontM": 6601.463761316933,
+        "phase": "traction"
+      },
+      {
+        "t": 1,
+        "d": 23.905878169053878,
+        "v": 88.122322817188,
+        "frontM": 6603.905878169054,
+        "phase": "traction"
+      },
+      {
+        "t": 1.1,
+        "d": 26.35944591788853,
+        "v": 88.53455509890681,
+        "frontM": 6606.3594459178885,
+        "phase": "traction"
+      },
+      {
+        "t": 1.2000000000000002,
+        "d": 28.82446456343759,
+        "v": 88.94678738062561,
+        "frontM": 6608.824464563438,
+        "phase": "traction"
+      },
+      {
+        "t": 1.3000000000000003,
+        "d": 31.300934105701064,
+        "v": 89.35901966234441,
+        "frontM": 6611.300934105701,
+        "phase": "traction"
+      },
+      {
+        "t": 1.4000000000000004,
+        "d": 33.788854544678934,
+        "v": 89.77125194406321,
+        "frontM": 6613.7888545446785,
+        "phase": "traction"
+      },
+      {
+        "t": 1.5000000000000004,
+        "d": 36.28822588037123,
+        "v": 90.18348422578201,
+        "frontM": 6616.288225880371,
+        "phase": "traction"
+      },
+      {
+        "t": 1.6000000000000005,
+        "d": 38.79904811277795,
+        "v": 90.59571650750081,
+        "frontM": 6618.799048112778,
+        "phase": "traction"
+      },
+      {
+        "t": 1.7000000000000006,
+        "d": 41.32132124189907,
+        "v": 91.00794878921961,
+        "frontM": 6621.321321241899,
+        "phase": "traction"
+      },
+      {
+        "t": 1.8,
+        "d": 43.85504526773457,
+        "v": 91.42018107093841,
+        "frontM": 6623.855045267735,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 1.9000000000000001,
+        "d": 46.39559519028451,
+        "v": 91.49491335265725,
+        "frontM": 6626.395595190284,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2,
+        "d": 48.93784600954886,
+        "v": 91.54264563437609,
+        "frontM": 6628.937846009549,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.1,
+        "d": 51.48104772552763,
+        "v": 91.56337791609492,
+        "frontM": 6631.481047725528,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.2,
+        "d": 54.02445033822081,
+        "v": 91.55711019781376,
+        "frontM": 6634.024450338221,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.3000000000000003,
+        "d": 56.5673038476284,
+        "v": 91.52384247953259,
+        "frontM": 6636.567303847628,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.4000000000000004,
+        "d": 59.1088582537504,
+        "v": 91.46357476125142,
+        "frontM": 6639.10885825375,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.5000000000000004,
+        "d": 61.6483635565868,
+        "v": 91.37630704297027,
+        "frontM": 6641.648363556586,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.6000000000000005,
+        "d": 64.18506975613762,
+        "v": 91.2620393246891,
+        "frontM": 6644.185069756138,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.7000000000000006,
+        "d": 66.71822685240286,
+        "v": 91.12077160640793,
+        "frontM": 6646.718226852403,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.8000000000000007,
+        "d": 69.24708484538252,
+        "v": 90.95250388812676,
+        "frontM": 6649.247084845382,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 2.900000000000001,
+        "d": 71.77089373507657,
+        "v": 90.75723616984558,
+        "frontM": 6651.770893735076,
+        "phase": "brake build-up"
+      },
+      {
+        "t": 3,
+        "d": 74.28890352148503,
+        "v": 90.53496845156441,
+        "frontM": 6654.288903521485,
+        "phase": "braking"
+      },
+      {
+        "t": 3.1,
+        "d": 76.80048920460787,
+        "v": 90.29920073328319,
+        "frontM": 6656.800489204608,
+        "phase": "braking"
+      },
+      {
+        "t": 3.2,
+        "d": 79.3055257844452,
+        "v": 90.06343301500196,
+        "frontM": 6659.305525784445,
+        "phase": "braking"
+      },
+      {
+        "t": 3.3000000000000003,
+        "d": 81.80401326099691,
+        "v": 89.82766529672074,
+        "frontM": 6661.804013260997,
+        "phase": "braking"
+      },
+      {
+        "t": 3.4000000000000004,
+        "d": 84.29595163426299,
+        "v": 89.59189757843951,
+        "frontM": 6664.295951634263,
+        "phase": "braking"
+      },
+      {
+        "t": 3.5000000000000004,
+        "d": 86.78134090424354,
+        "v": 89.35612986015829,
+        "frontM": 6666.781340904244,
+        "phase": "braking"
+      },
+      {
+        "t": 3.6000000000000005,
+        "d": 89.26018107093849,
+        "v": 89.12036214187707,
+        "frontM": 6669.260181070938,
+        "phase": "braking"
+      },
+      {
+        "t": 3.7000000000000006,
+        "d": 91.7324721343478,
+        "v": 88.88459442359584,
+        "frontM": 6671.7324721343475,
+        "phase": "braking"
+      },
+      {
+        "t": 3.8000000000000007,
+        "d": 94.19821409447157,
+        "v": 88.64882670531462,
+        "frontM": 6674.198214094472,
+        "phase": "braking"
+      },
+      {
+        "t": 3.900000000000001,
+        "d": 96.65740695130975,
+        "v": 88.4130589870334,
+        "frontM": 6676.65740695131,
+        "phase": "braking"
+      },
+      {
+        "t": 4.000000000000001,
+        "d": 99.1100507048623,
+        "v": 88.17729126875217,
+        "frontM": 6679.110050704862,
+        "phase": "braking"
+      },
+      {
+        "t": 4.099999999999999,
+        "d": 101.55614535512929,
+        "v": 87.94152355047095,
+        "frontM": 6681.556145355129,
+        "phase": "braking"
+      },
+      {
+        "t": 4.199999999999997,
+        "d": 103.99569090211071,
+        "v": 87.70575583218972,
+        "frontM": 6683.995690902111,
+        "phase": "braking"
+      },
+      {
+        "t": 4.2999999999999945,
+        "d": 106.4286873458065,
+        "v": 87.4699881139085,
+        "frontM": 6686.428687345807,
+        "phase": "braking"
+      },
+      {
+        "t": 4.399999999999992,
+        "d": 108.85513468621672,
+        "v": 87.23422039562728,
+        "frontM": 6688.855134686217,
+        "phase": "braking"
+      },
+      {
+        "t": 4.49999999999999,
+        "d": 111.27503292334137,
+        "v": 86.99845267734605,
+        "frontM": 6691.275032923341,
+        "phase": "braking"
+      },
+      {
+        "t": 4.599999999999988,
+        "d": 113.68838205718039,
+        "v": 86.76268495906483,
+        "frontM": 6693.68838205718,
+        "phase": "braking"
+      },
+      {
+        "t": 4.699999999999986,
+        "d": 116.09518208773383,
+        "v": 86.5269172407836,
+        "frontM": 6696.0951820877335,
+        "phase": "braking"
+      },
+      {
+        "t": 4.799999999999984,
+        "d": 118.49543301500172,
+        "v": 86.29114952250238,
+        "frontM": 6698.495433015002,
+        "phase": "braking"
+      },
+      {
+        "t": 4.899999999999982,
+        "d": 120.88913483898398,
+        "v": 86.05538180422116,
+        "frontM": 6700.889134838984,
+        "phase": "braking"
+      },
+      {
+        "t": 4.99999999999998,
+        "d": 123.27628755968064,
+        "v": 85.81961408593993,
+        "frontM": 6703.276287559681,
+        "phase": "braking"
+      },
+      {
+        "t": 5.099999999999977,
+        "d": 125.65689117709177,
+        "v": 85.58384636765871,
+        "frontM": 6705.656891177092,
+        "phase": "braking"
+      },
+      {
+        "t": 5.199999999999975,
+        "d": 128.03094569121725,
+        "v": 85.34807864937748,
+        "frontM": 6708.030945691217,
+        "phase": "braking"
+      },
+      {
+        "t": 5.299999999999973,
+        "d": 130.39845110205718,
+        "v": 85.11231093109626,
+        "frontM": 6710.398451102057,
+        "phase": "braking"
+      },
+      {
+        "t": 5.399999999999971,
+        "d": 132.75940740961147,
+        "v": 84.87654321281504,
+        "frontM": 6712.759407409611,
+        "phase": "braking"
+      },
+      {
+        "t": 5.499999999999969,
+        "d": 135.11381461388024,
+        "v": 84.64077549453381,
+        "frontM": 6715.11381461388,
+        "phase": "braking"
+      },
+      {
+        "t": 5.599999999999967,
+        "d": 137.4616727148634,
+        "v": 84.40500777625259,
+        "frontM": 6717.461672714863,
+        "phase": "braking"
+      },
+      {
+        "t": 5.699999999999965,
+        "d": 139.80298171256092,
+        "v": 84.16924005797136,
+        "frontM": 6719.802981712561,
+        "phase": "braking"
+      },
+      {
+        "t": 5.7999999999999625,
+        "d": 142.1377416069729,
+        "v": 83.93347233969014,
+        "frontM": 6722.137741606973,
+        "phase": "braking"
+      },
+      {
+        "t": 5.89999999999996,
+        "d": 144.4659523980993,
+        "v": 83.69770462140892,
+        "frontM": 6724.465952398099,
+        "phase": "braking"
+      },
+      {
+        "t": 5.999999999999958,
+        "d": 146.78761408594005,
+        "v": 83.4619369031277,
+        "frontM": 6726.78761408594,
+        "phase": "braking"
+      },
+      {
+        "t": 6.099999999999956,
+        "d": 149.10272667049526,
+        "v": 83.22616918484647,
+        "frontM": 6729.102726670495,
+        "phase": "braking"
+      },
+      {
+        "t": 6.199999999999954,
+        "d": 151.4112901517649,
+        "v": 82.99040146656525,
+        "frontM": 6731.411290151765,
+        "phase": "braking"
+      },
+      {
+        "t": 6.299999999999952,
+        "d": 153.71330452974888,
+        "v": 82.75463374828402,
+        "frontM": 6733.713304529749,
+        "phase": "braking"
+      },
+      {
+        "t": 6.39999999999995,
+        "d": 156.0087698044473,
+        "v": 82.5188660300028,
+        "frontM": 6736.008769804447,
+        "phase": "braking"
+      },
+      {
+        "t": 6.499999999999948,
+        "d": 158.29768597586016,
+        "v": 82.28309831172157,
+        "frontM": 6738.29768597586,
+        "phase": "braking"
+      },
+      {
+        "t": 6.5999999999999455,
+        "d": 160.5800530439874,
+        "v": 82.04733059344035,
+        "frontM": 6740.580053043987,
+        "phase": "braking"
+      },
+      {
+        "t": 6.699999999999943,
+        "d": 162.85587100882904,
+        "v": 81.81156287515913,
+        "frontM": 6742.855871008829,
+        "phase": "braking"
+      },
+      {
+        "t": 6.799999999999941,
+        "d": 165.12513987038514,
+        "v": 81.5757951568779,
+        "frontM": 6745.125139870385,
+        "phase": "braking"
+      },
+      {
+        "t": 6.899999999999939,
+        "d": 167.3878596286556,
+        "v": 81.34002743859668,
+        "frontM": 6747.387859628656,
+        "phase": "braking"
+      },
+      {
+        "t": 6.999999999999937,
+        "d": 169.64403028364046,
+        "v": 81.10425972031545,
+        "frontM": 6749.644030283641,
+        "phase": "braking"
+      },
+      {
+        "t": 7.099999999999935,
+        "d": 171.8936518353398,
+        "v": 80.86849200203423,
+        "frontM": 6751.893651835339,
+        "phase": "braking"
+      },
+      {
+        "t": 7.199999999999933,
+        "d": 174.1367242837535,
+        "v": 80.632724283753,
+        "frontM": 6754.136724283753,
+        "phase": "braking"
+      },
+      {
+        "t": 7.2999999999999305,
+        "d": 176.3732476288816,
+        "v": 80.39695656547178,
+        "frontM": 6756.3732476288815,
+        "phase": "braking"
+      },
+      {
+        "t": 7.399999999999928,
+        "d": 178.60322187072416,
+        "v": 80.16118884719056,
+        "frontM": 6758.603221870724,
+        "phase": "braking"
+      },
+      {
+        "t": 7.499999999999926,
+        "d": 180.8266470092811,
+        "v": 79.92542112890933,
+        "frontM": 6760.826647009281,
+        "phase": "braking"
+      },
+      {
+        "t": 7.599999999999924,
+        "d": 183.04352304455242,
+        "v": 79.68965341062811,
+        "frontM": 6763.043523044553,
+        "phase": "braking"
+      },
+      {
+        "t": 7.699999999999922,
+        "d": 185.25384997653822,
+        "v": 79.45388569234689,
+        "frontM": 6765.253849976538,
+        "phase": "braking"
+      },
+      {
+        "t": 7.79999999999992,
+        "d": 187.4576278052384,
+        "v": 79.21811797406566,
+        "frontM": 6767.457627805238,
+        "phase": "braking"
+      },
+      {
+        "t": 7.899999999999918,
+        "d": 189.65485653065295,
+        "v": 78.98235025578444,
+        "frontM": 6769.654856530653,
+        "phase": "braking"
+      },
+      {
+        "t": 7.999999999999916,
+        "d": 191.845536152782,
+        "v": 78.74658253750322,
+        "frontM": 6771.845536152782,
+        "phase": "braking"
+      },
+      {
+        "t": 8.099999999999914,
+        "d": 194.0296666716254,
+        "v": 78.51081481922199,
+        "frontM": 6774.029666671626,
+        "phase": "braking"
+      },
+      {
+        "t": 8.199999999999912,
+        "d": 196.20724808718316,
+        "v": 78.27504710094077,
+        "frontM": 6776.207248087183,
+        "phase": "braking"
+      },
+      {
+        "t": 8.29999999999991,
+        "d": 198.37828039945543,
+        "v": 78.03927938265954,
+        "frontM": 6778.378280399455,
+        "phase": "braking"
+      },
+      {
+        "t": 8.399999999999908,
+        "d": 200.54276360844207,
+        "v": 77.80351166437832,
+        "frontM": 6780.542763608442,
+        "phase": "braking"
+      },
+      {
+        "t": 8.499999999999906,
+        "d": 202.70069771414308,
+        "v": 77.5677439460971,
+        "frontM": 6782.700697714143,
+        "phase": "braking"
+      },
+      {
+        "t": 8.599999999999904,
+        "d": 204.85208271655858,
+        "v": 77.33197622781587,
+        "frontM": 6784.8520827165585,
+        "phase": "braking"
+      },
+      {
+        "t": 8.699999999999902,
+        "d": 206.99691861568846,
+        "v": 77.09620850953465,
+        "frontM": 6786.996918615689,
+        "phase": "braking"
+      },
+      {
+        "t": 8.7999999999999,
+        "d": 209.1352054115327,
+        "v": 76.86044079125342,
+        "frontM": 6789.135205411532,
+        "phase": "braking"
+      },
+      {
+        "t": 8.899999999999897,
+        "d": 211.2669431040914,
+        "v": 76.6246730729722,
+        "frontM": 6791.266943104091,
+        "phase": "braking"
+      },
+      {
+        "t": 8.999999999999895,
+        "d": 213.39213169336452,
+        "v": 76.38890535469098,
+        "frontM": 6793.392131693365,
+        "phase": "braking"
+      },
+      {
+        "t": 9.099999999999893,
+        "d": 215.510771179352,
+        "v": 76.15313763640975,
+        "frontM": 6795.510771179352,
+        "phase": "braking"
+      },
+      {
+        "t": 9.199999999999891,
+        "d": 217.62286156205394,
+        "v": 75.91736991812853,
+        "frontM": 6797.622861562054,
+        "phase": "braking"
+      },
+      {
+        "t": 9.299999999999889,
+        "d": 219.72840284147028,
+        "v": 75.6816021998473,
+        "frontM": 6799.728402841471,
+        "phase": "braking"
+      },
+      {
+        "t": 9.399999999999887,
+        "d": 221.827395017601,
+        "v": 75.44583448156608,
+        "frontM": 6801.827395017601,
+        "phase": "braking"
+      },
+      {
+        "t": 9.499999999999885,
+        "d": 223.91983809044615,
+        "v": 75.21006676328486,
+        "frontM": 6803.919838090446,
+        "phase": "braking"
+      },
+      {
+        "t": 9.599999999999882,
+        "d": 226.00573206000573,
+        "v": 74.97429904500363,
+        "frontM": 6806.005732060005,
+        "phase": "braking"
+      },
+      {
+        "t": 9.69999999999988,
+        "d": 228.08507692627967,
+        "v": 74.73853132672241,
+        "frontM": 6808.08507692628,
+        "phase": "braking"
+      },
+      {
+        "t": 9.799999999999878,
+        "d": 230.15787268926806,
+        "v": 74.50276360844119,
+        "frontM": 6810.157872689268,
+        "phase": "braking"
+      },
+      {
+        "t": 9.899999999999876,
+        "d": 232.22411934897087,
+        "v": 74.26699589015996,
+        "frontM": 6812.224119348971,
+        "phase": "braking"
+      },
+      {
+        "t": 9.999999999999874,
+        "d": 234.28381690538805,
+        "v": 74.03122817187874,
+        "frontM": 6814.283816905388,
+        "phase": "braking"
+      },
+      {
+        "t": 10.099999999999872,
+        "d": 236.33696535851968,
+        "v": 73.79546045359751,
+        "frontM": 6816.33696535852,
+        "phase": "braking"
+      },
+      {
+        "t": 10.19999999999987,
+        "d": 238.38356470836572,
+        "v": 73.55969273531629,
+        "frontM": 6818.383564708366,
+        "phase": "braking"
+      },
+      {
+        "t": 10.299999999999867,
+        "d": 240.42361495492614,
+        "v": 73.32392501703507,
+        "frontM": 6820.423614954926,
+        "phase": "braking"
+      },
+      {
+        "t": 10.399999999999865,
+        "d": 242.457116098201,
+        "v": 73.08815729875384,
+        "frontM": 6822.457116098201,
+        "phase": "braking"
+      },
+      {
+        "t": 10.499999999999863,
+        "d": 244.48406813819028,
+        "v": 72.85238958047262,
+        "frontM": 6824.48406813819,
+        "phase": "braking"
+      },
+      {
+        "t": 10.599999999999861,
+        "d": 246.50447107489393,
+        "v": 72.6166218621914,
+        "frontM": 6826.504471074894,
+        "phase": "braking"
+      },
+      {
+        "t": 10.699999999999859,
+        "d": 248.518324908312,
+        "v": 72.38085414391017,
+        "frontM": 6828.518324908312,
+        "phase": "braking"
+      },
+      {
+        "t": 10.799999999999857,
+        "d": 250.5256296384445,
+        "v": 72.14508642562895,
+        "frontM": 6830.525629638444,
+        "phase": "braking"
+      },
+      {
+        "t": 10.899999999999855,
+        "d": 252.5263852652914,
+        "v": 71.90931870734772,
+        "frontM": 6832.5263852652915,
+        "phase": "braking"
+      },
+      {
+        "t": 10.999999999999853,
+        "d": 254.5205917888527,
+        "v": 71.6735509890665,
+        "frontM": 6834.5205917888525,
+        "phase": "braking"
+      },
+      {
+        "t": 11.09999999999985,
+        "d": 256.50824920912845,
+        "v": 71.43778327078527,
+        "frontM": 6836.508249209129,
+        "phase": "braking"
+      },
+      {
+        "t": 11.199999999999848,
+        "d": 258.48935752611857,
+        "v": 71.20201555250405,
+        "frontM": 6838.4893575261185,
+        "phase": "braking"
+      },
+      {
+        "t": 11.299999999999846,
+        "d": 260.4639167398231,
+        "v": 70.96624783422283,
+        "frontM": 6840.463916739823,
+        "phase": "braking"
+      },
+      {
+        "t": 11.399999999999844,
+        "d": 262.43192685024206,
+        "v": 70.7304801159416,
+        "frontM": 6842.431926850242,
+        "phase": "braking"
+      },
+      {
+        "t": 11.499999999999842,
+        "d": 264.39338785737544,
+        "v": 70.49471239766038,
+        "frontM": 6844.393387857375,
+        "phase": "braking"
+      },
+      {
+        "t": 11.59999999999984,
+        "d": 266.3482997612232,
+        "v": 70.25894467937916,
+        "frontM": 6846.348299761223,
+        "phase": "braking"
+      },
+      {
+        "t": 11.699999999999838,
+        "d": 268.2966625617854,
+        "v": 70.02317696109793,
+        "frontM": 6848.2966625617855,
+        "phase": "braking"
+      },
+      {
+        "t": 11.799999999999836,
+        "d": 270.238476259062,
+        "v": 69.78740924281671,
+        "frontM": 6850.238476259062,
+        "phase": "braking"
+      },
+      {
+        "t": 11.899999999999833,
+        "d": 272.17374085305295,
+        "v": 69.55164152453548,
+        "frontM": 6852.173740853053,
+        "phase": "braking"
+      },
+      {
+        "t": 11.999999999999831,
+        "d": 274.10245634375843,
+        "v": 69.31587380625426,
+        "frontM": 6854.102456343759,
+        "phase": "braking"
+      },
+      {
+        "t": 12.09999999999983,
+        "d": 276.0246227311782,
+        "v": 69.08010608797304,
+        "frontM": 6856.024622731178,
+        "phase": "braking"
+      },
+      {
+        "t": 12.199999999999827,
+        "d": 277.94024001531244,
+        "v": 68.84433836969181,
+        "frontM": 6857.940240015312,
+        "phase": "braking"
+      },
+      {
+        "t": 12.299999999999825,
+        "d": 279.84930819616113,
+        "v": 68.60857065141059,
+        "frontM": 6859.8493081961615,
+        "phase": "braking"
+      },
+      {
+        "t": 12.399999999999823,
+        "d": 281.7518272737242,
+        "v": 68.37280293312936,
+        "frontM": 6861.751827273724,
+        "phase": "braking"
+      },
+      {
+        "t": 12.49999999999982,
+        "d": 283.6477972480016,
+        "v": 68.13703521484814,
+        "frontM": 6863.647797248002,
+        "phase": "braking"
+      },
+      {
+        "t": 12.599999999999818,
+        "d": 285.5372181189935,
+        "v": 67.90126749656692,
+        "frontM": 6865.537218118993,
+        "phase": "braking"
+      },
+      {
+        "t": 12.699999999999816,
+        "d": 287.4200898866998,
+        "v": 67.66549977828569,
+        "frontM": 6867.4200898867,
+        "phase": "braking"
+      },
+      {
+        "t": 12.799999999999814,
+        "d": 289.29641255112045,
+        "v": 67.42973206000447,
+        "frontM": 6869.296412551121,
+        "phase": "braking"
+      },
+      {
+        "t": 12.899999999999812,
+        "d": 291.1661861122556,
+        "v": 67.19396434172324,
+        "frontM": 6871.166186112256,
+        "phase": "braking"
+      },
+      {
+        "t": 12.99999999999981,
+        "d": 293.02941057010514,
+        "v": 66.95819662344202,
+        "frontM": 6873.029410570105,
+        "phase": "braking"
+      },
+      {
+        "t": 13.099999999999808,
+        "d": 294.88608592466903,
+        "v": 66.7224289051608,
+        "frontM": 6874.886085924669,
+        "phase": "braking"
+      },
+      {
+        "t": 13.199999999999806,
+        "d": 296.7362121759474,
+        "v": 66.48666118687957,
+        "frontM": 6876.736212175947,
+        "phase": "braking"
+      },
+      {
+        "t": 13.299999999999804,
+        "d": 298.57978932394013,
+        "v": 66.25089346859835,
+        "frontM": 6878.5797893239405,
+        "phase": "braking"
+      },
+      {
+        "t": 13.399999999999801,
+        "d": 300.4168173686473,
+        "v": 66.01512575031713,
+        "frontM": 6880.416817368648,
+        "phase": "braking"
+      },
+      {
+        "t": 13.4999999999998,
+        "d": 302.24729631006886,
+        "v": 65.7793580320359,
+        "frontM": 6882.247296310069,
+        "phase": "braking"
+      },
+      {
+        "t": 13.599999999999797,
+        "d": 304.07122614820486,
+        "v": 65.54359031375468,
+        "frontM": 6884.071226148205,
+        "phase": "braking"
+      },
+      {
+        "t": 13.699999999999795,
+        "d": 305.8886068830552,
+        "v": 65.30782259547345,
+        "frontM": 6885.888606883055,
+        "phase": "braking"
+      },
+      {
+        "t": 13.799999999999793,
+        "d": 307.69943851462,
+        "v": 65.07205487719223,
+        "frontM": 6887.69943851462,
+        "phase": "braking"
+      },
+      {
+        "t": 13.89999999999979,
+        "d": 309.50372104289926,
+        "v": 64.836287158911,
+        "frontM": 6889.503721042899,
+        "phase": "braking"
+      },
+      {
+        "t": 13.999999999999789,
+        "d": 311.3014544678928,
+        "v": 64.60051944062978,
+        "frontM": 6891.301454467893,
+        "phase": "braking"
+      },
+      {
+        "t": 14.099999999999786,
+        "d": 313.09263878960087,
+        "v": 64.36475172234856,
+        "frontM": 6893.092638789601,
+        "phase": "braking"
+      },
+      {
+        "t": 14.199999999999784,
+        "d": 314.87727400802333,
+        "v": 64.12898400406733,
+        "frontM": 6894.877274008023,
+        "phase": "braking"
+      },
+      {
+        "t": 14.299999999999782,
+        "d": 316.65536012316016,
+        "v": 63.89321628578611,
+        "frontM": 6896.65536012316,
+        "phase": "braking"
+      },
+      {
+        "t": 14.39999999999978,
+        "d": 318.4268971350115,
+        "v": 63.657448567504886,
+        "frontM": 6898.426897135011,
+        "phase": "braking"
+      },
+      {
+        "t": 14.499999999999778,
+        "d": 320.19188504357714,
+        "v": 63.42168084922366,
+        "frontM": 6900.191885043577,
+        "phase": "braking"
+      },
+      {
+        "t": 14.599999999999776,
+        "d": 321.95032384885724,
+        "v": 63.18591313094244,
+        "frontM": 6901.950323848857,
+        "phase": "braking"
+      },
+      {
+        "t": 14.699999999999774,
+        "d": 323.7022135508517,
+        "v": 62.950145412661215,
+        "frontM": 6903.702213550851,
+        "phase": "braking"
+      },
+      {
+        "t": 14.799999999999772,
+        "d": 325.44755414956063,
+        "v": 62.71437769437999,
+        "frontM": 6905.44755414956,
+        "phase": "braking"
+      },
+      {
+        "t": 14.89999999999977,
+        "d": 327.18634564498393,
+        "v": 62.47860997609877,
+        "frontM": 6907.186345644984,
+        "phase": "braking"
+      },
+      {
+        "t": 14.999999999999767,
+        "d": 328.91858803712165,
+        "v": 62.24284225781754,
+        "frontM": 6908.9185880371215,
+        "phase": "braking"
+      },
+      {
+        "t": 15.099999999999765,
+        "d": 330.64428132597385,
+        "v": 62.00707453953632,
+        "frontM": 6910.644281325974,
+        "phase": "braking"
+      },
+      {
+        "t": 15.199999999999763,
+        "d": 332.36342551154036,
+        "v": 61.771306821255095,
+        "frontM": 6912.36342551154,
+        "phase": "braking"
+      },
+      {
+        "t": 15.299999999999761,
+        "d": 334.0760205938213,
+        "v": 61.53553910297387,
+        "frontM": 6914.076020593821,
+        "phase": "braking"
+      },
+      {
+        "t": 15.399999999999759,
+        "d": 335.7820665728167,
+        "v": 61.29977138469265,
+        "frontM": 6915.782066572817,
+        "phase": "braking"
+      },
+      {
+        "t": 15.499999999999757,
+        "d": 337.48156344852646,
+        "v": 61.06400366641142,
+        "frontM": 6917.481563448527,
+        "phase": "braking"
+      },
+      {
+        "t": 15.599999999999755,
+        "d": 339.17451122095065,
+        "v": 60.8282359481302,
+        "frontM": 6919.174511220951,
+        "phase": "braking"
+      },
+      {
+        "t": 15.699999999999752,
+        "d": 340.86090989008926,
+        "v": 60.592468229848976,
+        "frontM": 6920.860909890089,
+        "phase": "braking"
+      },
+      {
+        "t": 15.79999999999975,
+        "d": 342.5407594559423,
+        "v": 60.35670051156775,
+        "frontM": 6922.540759455942,
+        "phase": "braking"
+      },
+      {
+        "t": 15.899999999999748,
+        "d": 344.21405991850963,
+        "v": 60.12093279328653,
+        "frontM": 6924.2140599185095,
+        "phase": "braking"
+      },
+      {
+        "t": 15.999999999999746,
+        "d": 345.8808112777915,
+        "v": 59.885165075005304,
+        "frontM": 6925.8808112777915,
+        "phase": "braking"
+      },
+      {
+        "t": 16.099999999999746,
+        "d": 347.54101353378775,
+        "v": 59.64939735672408,
+        "frontM": 6927.541013533788,
+        "phase": "braking"
+      },
+      {
+        "t": 16.199999999999743,
+        "d": 349.19466668649835,
+        "v": 59.413629638442856,
+        "frontM": 6929.194666686499,
+        "phase": "braking"
+      },
+      {
+        "t": 16.29999999999974,
+        "d": 350.8417707359235,
+        "v": 59.17786192016163,
+        "frontM": 6930.841770735923,
+        "phase": "braking"
+      },
+      {
+        "t": 16.39999999999974,
+        "d": 352.48232568206294,
+        "v": 58.94209420188041,
+        "frontM": 6932.482325682063,
+        "phase": "braking"
+      },
+      {
+        "t": 16.499999999999737,
+        "d": 354.1163315249168,
+        "v": 58.706326483599184,
+        "frontM": 6934.116331524917,
+        "phase": "braking"
+      },
+      {
+        "t": 16.599999999999735,
+        "d": 355.7437882644851,
+        "v": 58.47055876531796,
+        "frontM": 6935.743788264485,
+        "phase": "braking"
+      },
+      {
+        "t": 16.699999999999733,
+        "d": 357.3646959007678,
+        "v": 58.23479104703674,
+        "frontM": 6937.364695900767,
+        "phase": "braking"
+      },
+      {
+        "t": 16.79999999999973,
+        "d": 358.9790544337649,
+        "v": 57.99902332875551,
+        "frontM": 6938.979054433765,
+        "phase": "braking"
+      },
+      {
+        "t": 16.89999999999973,
+        "d": 360.5868638634764,
+        "v": 57.76325561047429,
+        "frontM": 6940.5868638634765,
+        "phase": "braking"
+      },
+      {
+        "t": 16.999999999999726,
+        "d": 362.1881241899024,
+        "v": 57.52748789219309,
+        "frontM": 6942.188124189903,
+        "phase": "braking"
+      },
+      {
+        "t": 17.099999999999724,
+        "d": 363.7828354130427,
+        "v": 57.29172017391193,
+        "frontM": 6943.782835413042,
+        "phase": "braking"
+      },
+      {
+        "t": 17.199999999999722,
+        "d": 365.3709975328975,
+        "v": 57.055952455630774,
+        "frontM": 6945.3709975328975,
+        "phase": "braking"
+      },
+      {
+        "t": 17.29999999999972,
+        "d": 366.95261054946667,
+        "v": 56.820184737349614,
+        "frontM": 6946.952610549467,
+        "phase": "braking"
+      },
+      {
+        "t": 17.399999999999718,
+        "d": 368.5276744627502,
+        "v": 56.584417019068454,
+        "frontM": 6948.52767446275,
+        "phase": "braking"
+      },
+      {
+        "t": 17.499999999999716,
+        "d": 370.0961892727483,
+        "v": 56.348649300787294,
+        "frontM": 6950.096189272748,
+        "phase": "braking"
+      },
+      {
+        "t": 17.599999999999714,
+        "d": 371.6581549794607,
+        "v": 56.112881582506134,
+        "frontM": 6951.658154979461,
+        "phase": "braking"
+      },
+      {
+        "t": 17.69999999999971,
+        "d": 373.2135715828875,
+        "v": 55.877113864224974,
+        "frontM": 6953.213571582887,
+        "phase": "braking"
+      },
+      {
+        "t": 17.79999999999971,
+        "d": 374.7624390830287,
+        "v": 55.641346145943814,
+        "frontM": 6954.762439083029,
+        "phase": "braking"
+      },
+      {
+        "t": 17.899999999999707,
+        "d": 376.30475747988436,
+        "v": 55.405578427662654,
+        "frontM": 6956.304757479885,
+        "phase": "braking"
+      },
+      {
+        "t": 17.999999999999705,
+        "d": 377.84052677345437,
+        "v": 55.169810709381494,
+        "frontM": 6957.840526773454,
+        "phase": "braking"
+      },
+      {
+        "t": 18.099999999999703,
+        "d": 379.36974696373886,
+        "v": 54.934042991100334,
+        "frontM": 6959.369746963739,
+        "phase": "braking"
+      },
+      {
+        "t": 18.1999999999997,
+        "d": 380.8924180507378,
+        "v": 54.698275272819174,
+        "frontM": 6960.892418050737,
+        "phase": "braking"
+      },
+      {
+        "t": 18.2999999999997,
+        "d": 382.408540034451,
+        "v": 54.462507554538014,
+        "frontM": 6962.408540034451,
+        "phase": "braking"
+      },
+      {
+        "t": 18.399999999999697,
+        "d": 383.91811291487875,
+        "v": 54.226739836256854,
+        "frontM": 6963.918112914878,
+        "phase": "braking"
+      },
+      {
+        "t": 18.499999999999694,
+        "d": 385.42113669202087,
+        "v": 53.990972117975694,
+        "frontM": 6965.421136692021,
+        "phase": "braking"
+      },
+      {
+        "t": 18.599999999999692,
+        "d": 386.91761136587735,
+        "v": 53.755204399694534,
+        "frontM": 6966.917611365878,
+        "phase": "braking"
+      },
+      {
+        "t": 18.69999999999969,
+        "d": 388.40753693644837,
+        "v": 53.519436681413374,
+        "frontM": 6968.407536936448,
+        "phase": "braking"
+      },
+      {
+        "t": 18.799999999999688,
+        "d": 389.8909134037337,
+        "v": 53.283668963132214,
+        "frontM": 6969.890913403734,
+        "phase": "braking"
+      },
+      {
+        "t": 18.899999999999686,
+        "d": 391.36774076773344,
+        "v": 53.047901244851055,
+        "frontM": 6971.367740767733,
+        "phase": "braking"
+      },
+      {
+        "t": 18.999999999999684,
+        "d": 392.83801902844766,
+        "v": 52.812133526569895,
+        "frontM": 6972.838019028448,
+        "phase": "braking"
+      },
+      {
+        "t": 19.09999999999968,
+        "d": 394.30174818587625,
+        "v": 52.576365808288735,
+        "frontM": 6974.301748185876,
+        "phase": "braking"
+      },
+      {
+        "t": 19.19999999999968,
+        "d": 395.75892824001926,
+        "v": 52.340598090007575,
+        "frontM": 6975.7589282400195,
+        "phase": "braking"
+      },
+      {
+        "t": 19.299999999999677,
+        "d": 397.2095591908767,
+        "v": 52.104830371726415,
+        "frontM": 6977.2095591908765,
+        "phase": "braking"
+      },
+      {
+        "t": 19.399999999999675,
+        "d": 398.65364103844854,
+        "v": 51.869062653445255,
+        "frontM": 6978.653641038449,
+        "phase": "braking"
+      },
+      {
+        "t": 19.499999999999673,
+        "d": 400.0911737827347,
+        "v": 51.633294935164095,
+        "frontM": 6980.091173782735,
+        "phase": "braking"
+      },
+      {
+        "t": 19.59999999999967,
+        "d": 401.5221574237354,
+        "v": 51.397527216882935,
+        "frontM": 6981.522157423736,
+        "phase": "braking"
+      },
+      {
+        "t": 19.69999999999967,
+        "d": 402.94659196145045,
+        "v": 51.161759498601775,
+        "frontM": 6982.94659196145,
+        "phase": "braking"
+      },
+      {
+        "t": 19.799999999999667,
+        "d": 404.3644773958799,
+        "v": 50.925991780320615,
+        "frontM": 6984.3644773958795,
+        "phase": "braking"
+      },
+      {
+        "t": 19.899999999999665,
+        "d": 405.77581372702383,
+        "v": 50.690224062039455,
+        "frontM": 6985.775813727024,
+        "phase": "braking"
+      },
+      {
+        "t": 19.999999999999662,
+        "d": 407.1806009548821,
+        "v": 50.454456343758295,
+        "frontM": 6987.180600954882,
+        "phase": "braking"
+      },
+      {
+        "t": 20.09999999999966,
+        "d": 408.5788390794548,
+        "v": 50.218688625477135,
+        "frontM": 6988.578839079455,
+        "phase": "braking"
+      },
+      {
+        "t": 20.19999999999966,
+        "d": 409.97052810074194,
+        "v": 49.982920907195975,
+        "frontM": 6989.970528100742,
+        "phase": "braking"
+      },
+      {
+        "t": 20.299999999999656,
+        "d": 411.3556680187435,
+        "v": 49.747153188914815,
+        "frontM": 6991.355668018743,
+        "phase": "braking"
+      },
+      {
+        "t": 20.399999999999654,
+        "d": 412.7342588334594,
+        "v": 49.511385470633655,
+        "frontM": 6992.7342588334595,
+        "phase": "braking"
+      },
+      {
+        "t": 20.499999999999652,
+        "d": 414.1063005448898,
+        "v": 49.275617752352495,
+        "frontM": 6994.10630054489,
+        "phase": "braking"
+      },
+      {
+        "t": 20.59999999999965,
+        "d": 415.4717931530346,
+        "v": 49.039850034071335,
+        "frontM": 6995.471793153035,
+        "phase": "braking"
+      },
+      {
+        "t": 20.699999999999648,
+        "d": 416.83073665789374,
+        "v": 48.804082315790176,
+        "frontM": 6996.830736657894,
+        "phase": "braking"
+      },
+      {
+        "t": 20.799999999999645,
+        "d": 418.18313105946737,
+        "v": 48.568314597509016,
+        "frontM": 6998.183131059467,
+        "phase": "braking"
+      },
+      {
+        "t": 20.899999999999643,
+        "d": 419.52897635775537,
+        "v": 48.332546879227856,
+        "frontM": 6999.528976357756,
+        "phase": "braking"
+      },
+      {
+        "t": 20.99999999999964,
+        "d": 420.8682725527578,
+        "v": 48.096779160946696,
+        "frontM": 7000.868272552758,
+        "phase": "braking"
+      },
+      {
+        "t": 21.09999999999964,
+        "d": 422.2010196444747,
+        "v": 47.861011442665536,
+        "frontM": 7002.201019644474,
+        "phase": "braking"
+      },
+      {
+        "t": 21.199999999999637,
+        "d": 423.5272176329059,
+        "v": 47.625243724384376,
+        "frontM": 7003.527217632906,
+        "phase": "braking"
+      },
+      {
+        "t": 21.299999999999635,
+        "d": 424.84686651805157,
+        "v": 47.389476006103216,
+        "frontM": 7004.846866518052,
+        "phase": "braking"
+      },
+      {
+        "t": 21.399999999999633,
+        "d": 426.1599662999117,
+        "v": 47.153708287822056,
+        "frontM": 7006.1599662999115,
+        "phase": "braking"
+      },
+      {
+        "t": 21.49999999999963,
+        "d": 427.46651697848614,
+        "v": 46.917940569540896,
+        "frontM": 7007.466516978486,
+        "phase": "braking"
+      },
+      {
+        "t": 21.59999999999963,
+        "d": 428.76651855377503,
+        "v": 46.682172851259736,
+        "frontM": 7008.766518553775,
+        "phase": "braking"
+      },
+      {
+        "t": 21.699999999999626,
+        "d": 430.05997102577834,
+        "v": 46.446405132978576,
+        "frontM": 7010.059971025778,
+        "phase": "braking"
+      },
+      {
+        "t": 21.799999999999624,
+        "d": 431.34687439449607,
+        "v": 46.210637414697416,
+        "frontM": 7011.346874394496,
+        "phase": "braking"
+      },
+      {
+        "t": 21.899999999999622,
+        "d": 432.62722865992816,
+        "v": 45.974869696416256,
+        "frontM": 7012.627228659928,
+        "phase": "braking"
+      },
+      {
+        "t": 21.99999999999962,
+        "d": 433.90103382207474,
+        "v": 45.739101978135096,
+        "frontM": 7013.901033822075,
+        "phase": "braking"
+      },
+      {
+        "t": 22.099999999999618,
+        "d": 435.1682898809357,
+        "v": 45.503334259853936,
+        "frontM": 7015.168289880936,
+        "phase": "braking"
+      },
+      {
+        "t": 22.199999999999616,
+        "d": 436.42899683651103,
+        "v": 45.267566541572776,
+        "frontM": 7016.428996836511,
+        "phase": "braking"
+      },
+      {
+        "t": 22.299999999999613,
+        "d": 437.68315468880087,
+        "v": 45.031798823291616,
+        "frontM": 7017.683154688801,
+        "phase": "braking"
+      },
+      {
+        "t": 22.39999999999961,
+        "d": 438.930763437805,
+        "v": 44.79603110501046,
+        "frontM": 7018.930763437805,
+        "phase": "braking"
+      },
+      {
+        "t": 22.49999999999961,
+        "d": 440.17182308352363,
+        "v": 44.5602633867293,
+        "frontM": 7020.171823083524,
+        "phase": "braking"
+      },
+      {
+        "t": 22.599999999999607,
+        "d": 441.4063336259567,
+        "v": 44.32449566844814,
+        "frontM": 7021.406333625957,
+        "phase": "braking"
+      },
+      {
+        "t": 22.699999999999605,
+        "d": 442.6342950651041,
+        "v": 44.08872795016698,
+        "frontM": 7022.634295065104,
+        "phase": "braking"
+      },
+      {
+        "t": 22.799999999999603,
+        "d": 443.85570740096597,
+        "v": 43.85296023188582,
+        "frontM": 7023.855707400966,
+        "phase": "braking"
+      },
+      {
+        "t": 22.8999999999996,
+        "d": 445.0705706335422,
+        "v": 43.61719251360466,
+        "frontM": 7025.070570633542,
+        "phase": "braking"
+      },
+      {
+        "t": 22.9999999999996,
+        "d": 446.2788847628329,
+        "v": 43.3814247953235,
+        "frontM": 7026.278884762833,
+        "phase": "braking"
+      },
+      {
+        "t": 23.099999999999596,
+        "d": 447.480649788838,
+        "v": 43.14565707704234,
+        "frontM": 7027.480649788838,
+        "phase": "braking"
+      },
+      {
+        "t": 23.199999999999594,
+        "d": 448.6758657115575,
+        "v": 42.90988935876118,
+        "frontM": 7028.675865711558,
+        "phase": "braking"
+      },
+      {
+        "t": 23.299999999999592,
+        "d": 449.86453253099137,
+        "v": 42.67412164048002,
+        "frontM": 7029.864532530992,
+        "phase": "braking"
+      },
+      {
+        "t": 23.39999999999959,
+        "d": 451.04665024713967,
+        "v": 42.43835392219886,
+        "frontM": 7031.04665024714,
+        "phase": "braking"
+      },
+      {
+        "t": 23.499999999999588,
+        "d": 452.22221886000244,
+        "v": 42.2025862039177,
+        "frontM": 7032.222218860003,
+        "phase": "braking"
+      },
+      {
+        "t": 23.599999999999586,
+        "d": 453.3912383695795,
+        "v": 41.96681848563654,
+        "frontM": 7033.39123836958,
+        "phase": "braking"
+      },
+      {
+        "t": 23.699999999999584,
+        "d": 454.5537087758711,
+        "v": 41.73105076735538,
+        "frontM": 7034.553708775871,
+        "phase": "braking"
+      },
+      {
+        "t": 23.79999999999958,
+        "d": 455.70963007887707,
+        "v": 41.49528304907422,
+        "frontM": 7035.709630078877,
+        "phase": "braking"
+      },
+      {
+        "t": 23.89999999999958,
+        "d": 456.8590022785974,
+        "v": 41.25951533079306,
+        "frontM": 7036.8590022785975,
+        "phase": "braking"
+      },
+      {
+        "t": 23.999999999999577,
+        "d": 458.00182537503224,
+        "v": 41.0237476125119,
+        "frontM": 7038.001825375032,
+        "phase": "braking"
+      },
+      {
+        "t": 24.099999999999575,
+        "d": 459.13809936818143,
+        "v": 40.78797989423074,
+        "frontM": 7039.138099368181,
+        "phase": "braking"
+      },
+      {
+        "t": 24.199999999999573,
+        "d": 460.26782425804504,
+        "v": 40.55221217594958,
+        "frontM": 7040.267824258045,
+        "phase": "braking"
+      },
+      {
+        "t": 24.29999999999957,
+        "d": 461.39100004462307,
+        "v": 40.31644445766842,
+        "frontM": 7041.391000044623,
+        "phase": "braking"
+      },
+      {
+        "t": 24.39999999999957,
+        "d": 462.5076267279155,
+        "v": 40.08067673938726,
+        "frontM": 7042.5076267279155,
+        "phase": "braking"
+      },
+      {
+        "t": 24.499999999999567,
+        "d": 463.61770430792234,
+        "v": 39.8449090211061,
+        "frontM": 7043.617704307922,
+        "phase": "braking"
+      },
+      {
+        "t": 24.599999999999564,
+        "d": 464.72123278464363,
+        "v": 39.60914130282494,
+        "frontM": 7044.721232784644,
+        "phase": "braking"
+      },
+      {
+        "t": 24.699999999999562,
+        "d": 465.81821215807935,
+        "v": 39.37337358454378,
+        "frontM": 7045.818212158079,
+        "phase": "braking"
+      },
+      {
+        "t": 24.79999999999956,
+        "d": 466.90864242822937,
+        "v": 39.13760586626262,
+        "frontM": 7046.9086424282295,
+        "phase": "braking"
+      },
+      {
+        "t": 24.899999999999558,
+        "d": 467.9925235950939,
+        "v": 38.90183814798146,
+        "frontM": 7047.992523595094,
+        "phase": "braking"
+      },
+      {
+        "t": 24.999999999999556,
+        "d": 469.06985565867285,
+        "v": 38.6660704297003,
+        "frontM": 7049.069855658673,
+        "phase": "braking"
+      },
+      {
+        "t": 25.099999999999554,
+        "d": 470.14063861896614,
+        "v": 38.43030271141914,
+        "frontM": 7050.1406386189665,
+        "phase": "braking"
+      },
+      {
+        "t": 25.19999999999955,
+        "d": 471.2048724759739,
+        "v": 38.19453499313798,
+        "frontM": 7051.204872475974,
+        "phase": "braking"
+      },
+      {
+        "t": 25.29999999999955,
+        "d": 472.26255722969603,
+        "v": 37.95876727485682,
+        "frontM": 7052.262557229696,
+        "phase": "braking"
+      },
+      {
+        "t": 25.399999999999547,
+        "d": 473.3136928801326,
+        "v": 37.72299955657566,
+        "frontM": 7053.313692880132,
+        "phase": "braking"
+      },
+      {
+        "t": 25.499999999999545,
+        "d": 474.35827942728355,
+        "v": 37.4872318382945,
+        "frontM": 7054.358279427283,
+        "phase": "braking"
+      },
+      {
+        "t": 25.599999999999543,
+        "d": 475.39631687114894,
+        "v": 37.25146412001334,
+        "frontM": 7055.396316871149,
+        "phase": "braking"
+      },
+      {
+        "t": 25.69999999999954,
+        "d": 476.4278052117287,
+        "v": 37.01569640173218,
+        "frontM": 7056.427805211729,
+        "phase": "braking"
+      },
+      {
+        "t": 25.79999999999954,
+        "d": 477.45274444902293,
+        "v": 36.77992868345102,
+        "frontM": 7057.452744449023,
+        "phase": "braking"
+      },
+      {
+        "t": 25.899999999999537,
+        "d": 478.4711345830316,
+        "v": 36.54416096516986,
+        "frontM": 7058.471134583032,
+        "phase": "braking"
+      },
+      {
+        "t": 25.999999999999535,
+        "d": 479.48297561375455,
+        "v": 36.3083932468887,
+        "frontM": 7059.482975613754,
+        "phase": "braking"
+      },
+      {
+        "t": 26.099999999999532,
+        "d": 480.48826754119204,
+        "v": 36.07262552860754,
+        "frontM": 7060.488267541192,
+        "phase": "braking"
+      },
+      {
+        "t": 26.19999999999953,
+        "d": 481.4870103653439,
+        "v": 35.83685781032638,
+        "frontM": 7061.487010365344,
+        "phase": "braking"
+      },
+      {
+        "t": 26.299999999999528,
+        "d": 482.47920408621013,
+        "v": 35.60109009204522,
+        "frontM": 7062.47920408621,
+        "phase": "braking"
+      },
+      {
+        "t": 26.399999999999526,
+        "d": 483.4648487037909,
+        "v": 35.36532237376406,
+        "frontM": 7063.464848703791,
+        "phase": "braking"
+      },
+      {
+        "t": 26.499999999999524,
+        "d": 484.44394421808596,
+        "v": 35.1295546554829,
+        "frontM": 7064.443944218086,
+        "phase": "braking"
+      },
+      {
+        "t": 26.599999999999522,
+        "d": 485.41649062909545,
+        "v": 34.89378693720174,
+        "frontM": 7065.416490629095,
+        "phase": "braking"
+      },
+      {
+        "t": 26.69999999999952,
+        "d": 486.3824879368194,
+        "v": 34.65801921892058,
+        "frontM": 7066.382487936819,
+        "phase": "braking"
+      },
+      {
+        "t": 26.799999999999518,
+        "d": 487.34193614125775,
+        "v": 34.42225150063942,
+        "frontM": 7067.341936141258,
+        "phase": "braking"
+      },
+      {
+        "t": 26.899999999999515,
+        "d": 488.2948352424105,
+        "v": 34.18648378235826,
+        "frontM": 7068.29483524241,
+        "phase": "braking"
+      },
+      {
+        "t": 26.999999999999513,
+        "d": 489.2411852402777,
+        "v": 33.9507160640771,
+        "frontM": 7069.241185240277,
+        "phase": "braking"
+      },
+      {
+        "t": 27.09999999999951,
+        "d": 490.18098613485927,
+        "v": 33.71494834579594,
+        "frontM": 7070.180986134859,
+        "phase": "braking"
+      },
+      {
+        "t": 27.19999999999951,
+        "d": 491.11423792615517,
+        "v": 33.47918062751478,
+        "frontM": 7071.1142379261555,
+        "phase": "braking"
+      },
+      {
+        "t": 27.299999999999507,
+        "d": 492.0409406141656,
+        "v": 33.24341290923362,
+        "frontM": 7072.040940614165,
+        "phase": "braking"
+      },
+      {
+        "t": 27.399999999999505,
+        "d": 492.9610941988904,
+        "v": 33.00764519095246,
+        "frontM": 7072.96109419889,
+        "phase": "braking"
+      },
+      {
+        "t": 27.499999999999503,
+        "d": 493.8746986803296,
+        "v": 32.7718774726713,
+        "frontM": 7073.87469868033,
+        "phase": "braking"
+      },
+      {
+        "t": 27.5999999999995,
+        "d": 494.7817540584833,
+        "v": 32.53610975439014,
+        "frontM": 7074.781754058483,
+        "phase": "braking"
+      },
+      {
+        "t": 27.6999999999995,
+        "d": 495.6822603333513,
+        "v": 32.30034203610898,
+        "frontM": 7075.682260333351,
+        "phase": "braking"
+      },
+      {
+        "t": 27.799999999999496,
+        "d": 496.5762175049337,
+        "v": 32.06457431782782,
+        "frontM": 7076.576217504934,
+        "phase": "braking"
+      },
+      {
+        "t": 27.899999999999494,
+        "d": 497.4636255732306,
+        "v": 31.828806599546656,
+        "frontM": 7077.46362557323,
+        "phase": "braking"
+      },
+      {
+        "t": 27.999999999999492,
+        "d": 498.3444845382419,
+        "v": 31.593038881265496,
+        "frontM": 7078.344484538242,
+        "phase": "braking"
+      },
+      {
+        "t": 28.09999999999949,
+        "d": 499.2187943999676,
+        "v": 31.357271162984336,
+        "frontM": 7079.218794399968,
+        "phase": "braking"
+      },
+      {
+        "t": 28.199999999999488,
+        "d": 500.0865551584077,
+        "v": 31.121503444703176,
+        "frontM": 7080.0865551584075,
+        "phase": "braking"
+      },
+      {
+        "t": 28.299999999999486,
+        "d": 500.9477668135622,
+        "v": 30.885735726422016,
+        "frontM": 7080.947766813562,
+        "phase": "braking"
+      },
+      {
+        "t": 28.399999999999483,
+        "d": 501.8024293654311,
+        "v": 30.649968008140856,
+        "frontM": 7081.802429365431,
+        "phase": "braking"
+      },
+      {
+        "t": 28.49999999999948,
+        "d": 502.6505428140145,
+        "v": 30.414200289859696,
+        "frontM": 7082.650542814014,
+        "phase": "braking"
+      },
+      {
+        "t": 28.59999999999948,
+        "d": 503.49210715931224,
+        "v": 30.178432571578536,
+        "frontM": 7083.492107159313,
+        "phase": "braking"
+      },
+      {
+        "t": 28.699999999999477,
+        "d": 504.3271224013244,
+        "v": 29.942664853297376,
+        "frontM": 7084.327122401324,
+        "phase": "braking"
+      },
+      {
+        "t": 28.799999999999475,
+        "d": 505.15558854005104,
+        "v": 29.706897135016217,
+        "frontM": 7085.155588540051,
+        "phase": "braking"
+      },
+      {
+        "t": 28.899999999999473,
+        "d": 505.977505575492,
+        "v": 29.471129416735057,
+        "frontM": 7085.977505575492,
+        "phase": "braking"
+      },
+      {
+        "t": 28.99999999999947,
+        "d": 506.79287350764736,
+        "v": 29.235361698453897,
+        "frontM": 7086.7928735076475,
+        "phase": "braking"
+      },
+      {
+        "t": 29.09999999999947,
+        "d": 507.6016923365172,
+        "v": 28.999593980172737,
+        "frontM": 7087.601692336517,
+        "phase": "braking"
+      },
+      {
+        "t": 29.199999999999466,
+        "d": 508.4039620621014,
+        "v": 28.763826261891577,
+        "frontM": 7088.4039620621015,
+        "phase": "braking"
+      },
+      {
+        "t": 29.299999999999464,
+        "d": 509.19968268440005,
+        "v": 28.528058543610417,
+        "frontM": 7089.1996826844,
+        "phase": "braking"
+      },
+      {
+        "t": 29.399999999999462,
+        "d": 509.9888542034131,
+        "v": 28.292290825329257,
+        "frontM": 7089.988854203413,
+        "phase": "braking"
+      },
+      {
+        "t": 29.49999999999946,
+        "d": 510.77147661914057,
+        "v": 28.056523107048097,
+        "frontM": 7090.77147661914,
+        "phase": "braking"
+      },
+      {
+        "t": 29.599999999999458,
+        "d": 511.5475499315824,
+        "v": 27.820755388766937,
+        "frontM": 7091.547549931583,
+        "phase": "braking"
+      },
+      {
+        "t": 29.699999999999456,
+        "d": 512.3170741407387,
+        "v": 27.584987670485777,
+        "frontM": 7092.317074140738,
+        "phase": "braking"
+      },
+      {
+        "t": 29.799999999999454,
+        "d": 513.0800492466094,
+        "v": 27.349219952204617,
+        "frontM": 7093.08004924661,
+        "phase": "braking"
+      },
+      {
+        "t": 29.89999999999945,
+        "d": 513.8364752491946,
+        "v": 27.113452233923457,
+        "frontM": 7093.836475249194,
+        "phase": "braking"
+      },
+      {
+        "t": 29.99999999999945,
+        "d": 514.586352148494,
+        "v": 26.877684515642297,
+        "frontM": 7094.586352148494,
+        "phase": "braking"
+      },
+      {
+        "t": 30.099999999999447,
+        "d": 515.3296799445079,
+        "v": 26.641916797361137,
+        "frontM": 7095.329679944508,
+        "phase": "braking"
+      },
+      {
+        "t": 30.199999999999445,
+        "d": 516.0664586372362,
+        "v": 26.406149079079977,
+        "frontM": 7096.066458637236,
+        "phase": "braking"
+      },
+      {
+        "t": 30.299999999999443,
+        "d": 516.7966882266791,
+        "v": 26.170381360798817,
+        "frontM": 7096.796688226679,
+        "phase": "braking"
+      },
+      {
+        "t": 30.39999999999944,
+        "d": 517.5203687128362,
+        "v": 25.934613642517657,
+        "frontM": 7097.520368712836,
+        "phase": "braking"
+      },
+      {
+        "t": 30.49999999999944,
+        "d": 518.2375000957078,
+        "v": 25.698845924236497,
+        "frontM": 7098.237500095708,
+        "phase": "braking"
+      },
+      {
+        "t": 30.599999999999437,
+        "d": 518.9480823752938,
+        "v": 25.463078205955338,
+        "frontM": 7098.948082375294,
+        "phase": "braking"
+      },
+      {
+        "t": 30.699999999999434,
+        "d": 519.6521155515942,
+        "v": 25.227310487674178,
+        "frontM": 7099.652115551594,
+        "phase": "braking"
+      },
+      {
+        "t": 30.799999999999432,
+        "d": 520.349599624609,
+        "v": 24.991542769393018,
+        "frontM": 7100.349599624609,
+        "phase": "braking"
+      },
+      {
+        "t": 30.89999999999943,
+        "d": 521.0405345943383,
+        "v": 24.755775051111858,
+        "frontM": 7101.040534594338,
+        "phase": "braking"
+      },
+      {
+        "t": 30.999999999999428,
+        "d": 521.7249204607818,
+        "v": 24.520007332830698,
+        "frontM": 7101.7249204607815,
+        "phase": "braking"
+      },
+      {
+        "t": 31.099999999999426,
+        "d": 522.40275722394,
+        "v": 24.284239614549538,
+        "frontM": 7102.40275722394,
+        "phase": "braking"
+      },
+      {
+        "t": 31.199999999999424,
+        "d": 523.0740448838125,
+        "v": 24.048471896268378,
+        "frontM": 7103.074044883812,
+        "phase": "braking"
+      },
+      {
+        "t": 31.29999999999942,
+        "d": 523.7387834403994,
+        "v": 23.812704177987218,
+        "frontM": 7103.7387834404,
+        "phase": "braking"
+      },
+      {
+        "t": 31.39999999999942,
+        "d": 524.3969728937006,
+        "v": 23.576936459706058,
+        "frontM": 7104.396972893701,
+        "phase": "braking"
+      },
+      {
+        "t": 31.499999999999417,
+        "d": 525.0486132437163,
+        "v": 23.341168741424898,
+        "frontM": 7105.048613243716,
+        "phase": "braking"
+      },
+      {
+        "t": 31.599999999999415,
+        "d": 525.6937044904464,
+        "v": 23.105401023143738,
+        "frontM": 7105.693704490446,
+        "phase": "braking"
+      },
+      {
+        "t": 31.699999999999413,
+        "d": 526.332246633891,
+        "v": 22.869633304862578,
+        "frontM": 7106.332246633891,
+        "phase": "braking"
+      },
+      {
+        "t": 31.79999999999941,
+        "d": 526.9642396740501,
+        "v": 22.63386558658142,
+        "frontM": 7106.96423967405,
+        "phase": "braking"
+      },
+      {
+        "t": 31.89999999999941,
+        "d": 527.5896836109233,
+        "v": 22.39809786830026,
+        "frontM": 7107.589683610923,
+        "phase": "braking"
+      },
+      {
+        "t": 31.999999999999407,
+        "d": 528.2085784445111,
+        "v": 22.1623301500191,
+        "frontM": 7108.208578444511,
+        "phase": "braking"
+      },
+      {
+        "t": 32.09999999999942,
+        "d": 528.8209241748133,
+        "v": 21.92656243173794,
+        "frontM": 7108.820924174814,
+        "phase": "braking"
+      },
+      {
+        "t": 32.199999999999434,
+        "d": 529.4267208018299,
+        "v": 21.69079471345678,
+        "frontM": 7109.42672080183,
+        "phase": "braking"
+      },
+      {
+        "t": 32.29999999999945,
+        "d": 530.0259683255609,
+        "v": 21.45502699517562,
+        "frontM": 7110.025968325561,
+        "phase": "braking"
+      },
+      {
+        "t": 32.399999999999466,
+        "d": 530.6186667460063,
+        "v": 21.21925927689446,
+        "frontM": 7110.618666746006,
+        "phase": "braking"
+      },
+      {
+        "t": 32.49999999999948,
+        "d": 531.204816063166,
+        "v": 20.9834915586133,
+        "frontM": 7111.204816063166,
+        "phase": "braking"
+      },
+      {
+        "t": 32.5999999999995,
+        "d": 531.7844162770403,
+        "v": 20.74772384033214,
+        "frontM": 7111.784416277041,
+        "phase": "braking"
+      },
+      {
+        "t": 32.69999999999951,
+        "d": 532.3574673876291,
+        "v": 20.51195612205098,
+        "frontM": 7112.357467387629,
+        "phase": "braking"
+      },
+      {
+        "t": 32.79999999999953,
+        "d": 532.9239693949321,
+        "v": 20.27618840376982,
+        "frontM": 7112.923969394932,
+        "phase": "braking"
+      },
+      {
+        "t": 32.899999999999544,
+        "d": 533.4839222989496,
+        "v": 20.04042068548866,
+        "frontM": 7113.483922298949,
+        "phase": "braking"
+      },
+      {
+        "t": 32.99999999999956,
+        "d": 534.0373260996814,
+        "v": 19.8046529672075,
+        "frontM": 7114.037326099681,
+        "phase": "braking"
+      },
+      {
+        "t": 33.099999999999575,
+        "d": 534.5841807971277,
+        "v": 19.56888524892634,
+        "frontM": 7114.584180797127,
+        "phase": "braking"
+      },
+      {
+        "t": 33.19999999999959,
+        "d": 535.1244863912885,
+        "v": 19.33311753064518,
+        "frontM": 7115.124486391289,
+        "phase": "braking"
+      },
+      {
+        "t": 33.299999999999606,
+        "d": 535.6582428821637,
+        "v": 19.09734981236402,
+        "frontM": 7115.658242882164,
+        "phase": "braking"
+      },
+      {
+        "t": 33.39999999999962,
+        "d": 536.1854502697531,
+        "v": 18.86158209408286,
+        "frontM": 7116.185450269753,
+        "phase": "braking"
+      },
+      {
+        "t": 33.49999999999964,
+        "d": 536.7061085540571,
+        "v": 18.6258143758017,
+        "frontM": 7116.706108554057,
+        "phase": "braking"
+      },
+      {
+        "t": 33.59999999999965,
+        "d": 537.2202177350755,
+        "v": 18.39004665752054,
+        "frontM": 7117.2202177350755,
+        "phase": "braking"
+      },
+      {
+        "t": 33.69999999999967,
+        "d": 537.7277778128083,
+        "v": 18.15427893923938,
+        "frontM": 7117.727777812808,
+        "phase": "braking"
+      },
+      {
+        "t": 33.799999999999685,
+        "d": 538.2287887872554,
+        "v": 17.91851122095822,
+        "frontM": 7118.228788787255,
+        "phase": "braking"
+      },
+      {
+        "t": 33.8999999999997,
+        "d": 538.723250658417,
+        "v": 17.68274350267706,
+        "frontM": 7118.723250658417,
+        "phase": "braking"
+      },
+      {
+        "t": 33.999999999999716,
+        "d": 539.211163426293,
+        "v": 17.4469757843959,
+        "frontM": 7119.211163426293,
+        "phase": "braking"
+      },
+      {
+        "t": 34.09999999999973,
+        "d": 539.6925270908835,
+        "v": 17.21120806611474,
+        "frontM": 7119.692527090883,
+        "phase": "braking"
+      },
+      {
+        "t": 34.19999999999975,
+        "d": 540.1673416521884,
+        "v": 16.97544034783358,
+        "frontM": 7120.167341652188,
+        "phase": "braking"
+      },
+      {
+        "t": 34.29999999999976,
+        "d": 540.6356071102075,
+        "v": 16.73967262955242,
+        "frontM": 7120.635607110207,
+        "phase": "braking"
+      },
+      {
+        "t": 34.39999999999978,
+        "d": 541.0973234649412,
+        "v": 16.50390491127126,
+        "frontM": 7121.097323464941,
+        "phase": "braking"
+      },
+      {
+        "t": 34.499999999999794,
+        "d": 541.5524907163892,
+        "v": 16.2681371929901,
+        "frontM": 7121.552490716389,
+        "phase": "braking"
+      },
+      {
+        "t": 34.59999999999981,
+        "d": 542.0011088645517,
+        "v": 16.03236947470894,
+        "frontM": 7122.0011088645515,
+        "phase": "braking"
+      },
+      {
+        "t": 34.699999999999825,
+        "d": 542.4431779094288,
+        "v": 15.79660175642778,
+        "frontM": 7122.443177909428,
+        "phase": "braking"
+      },
+      {
+        "t": 34.79999999999984,
+        "d": 542.87869785102,
+        "v": 15.56083403814662,
+        "frontM": 7122.87869785102,
+        "phase": "braking"
+      },
+      {
+        "t": 34.89999999999986,
+        "d": 543.3076686893256,
+        "v": 15.32506631986546,
+        "frontM": 7123.3076686893255,
+        "phase": "braking"
+      },
+      {
+        "t": 34.99999999999987,
+        "d": 543.7300904243458,
+        "v": 15.0892986015843,
+        "frontM": 7123.730090424346,
+        "phase": "braking"
+      },
+      {
+        "t": 35.09999999999989,
+        "d": 544.1459630560804,
+        "v": 14.85353088330314,
+        "frontM": 7124.14596305608,
+        "phase": "braking"
+      },
+      {
+        "t": 35.1999999999999,
+        "d": 544.5552865845294,
+        "v": 14.61776316502198,
+        "frontM": 7124.555286584529,
+        "phase": "braking"
+      },
+      {
+        "t": 35.29999999999992,
+        "d": 544.9580610096928,
+        "v": 14.38199544674082,
+        "frontM": 7124.958061009693,
+        "phase": "braking"
+      },
+      {
+        "t": 35.399999999999935,
+        "d": 545.3542863315705,
+        "v": 14.14622772845966,
+        "frontM": 7125.354286331571,
+        "phase": "braking"
+      },
+      {
+        "t": 35.49999999999995,
+        "d": 545.7439625501627,
+        "v": 13.9104600101785,
+        "frontM": 7125.743962550163,
+        "phase": "braking"
+      },
+      {
+        "t": 35.599999999999966,
+        "d": 546.1270896654694,
+        "v": 13.67469229189734,
+        "frontM": 7126.12708966547,
+        "phase": "braking"
+      },
+      {
+        "t": 35.69999999999998,
+        "d": 546.5036676774904,
+        "v": 13.43892457361618,
+        "frontM": 7126.503667677491,
+        "phase": "braking"
+      },
+      {
+        "t": 35.8,
+        "d": 546.8736965862257,
+        "v": 13.20315685533502,
+        "frontM": 7126.873696586225,
+        "phase": "braking"
+      },
+      {
+        "t": 35.90000000000001,
+        "d": 547.2371763916756,
+        "v": 12.96738913705386,
+        "frontM": 7127.237176391675,
+        "phase": "braking"
+      },
+      {
+        "t": 36.00000000000003,
+        "d": 547.5941070938399,
+        "v": 12.7316214187727,
+        "frontM": 7127.59410709384,
+        "phase": "braking"
+      },
+      {
+        "t": 36.100000000000044,
+        "d": 547.9444886927186,
+        "v": 12.49585370049154,
+        "frontM": 7127.944488692719,
+        "phase": "braking"
+      },
+      {
+        "t": 36.20000000000006,
+        "d": 548.2883211883117,
+        "v": 12.26008598221038,
+        "frontM": 7128.288321188312,
+        "phase": "braking"
+      },
+      {
+        "t": 36.300000000000075,
+        "d": 548.6256045806191,
+        "v": 12.02431826392922,
+        "frontM": 7128.625604580619,
+        "phase": "braking"
+      },
+      {
+        "t": 36.40000000000009,
+        "d": 548.956338869641,
+        "v": 11.78855054564806,
+        "frontM": 7128.956338869641,
+        "phase": "braking"
+      },
+      {
+        "t": 36.50000000000011,
+        "d": 549.2805240553773,
+        "v": 11.5527828273669,
+        "frontM": 7129.280524055377,
+        "phase": "braking"
+      },
+      {
+        "t": 36.60000000000012,
+        "d": 549.5981601378281,
+        "v": 11.317015109085741,
+        "frontM": 7129.598160137828,
+        "phase": "braking"
+      },
+      {
+        "t": 36.70000000000014,
+        "d": 549.9092471169932,
+        "v": 11.081247390804581,
+        "frontM": 7129.909247116993,
+        "phase": "braking"
+      },
+      {
+        "t": 36.80000000000015,
+        "d": 550.2137849928728,
+        "v": 10.845479672523421,
+        "frontM": 7130.213784992873,
+        "phase": "braking"
+      },
+      {
+        "t": 36.90000000000017,
+        "d": 550.5117737654667,
+        "v": 10.609711954242261,
+        "frontM": 7130.511773765466,
+        "phase": "braking"
+      },
+      {
+        "t": 37.000000000000185,
+        "d": 550.8032134347751,
+        "v": 10.373944235961101,
+        "frontM": 7130.803213434775,
+        "phase": "braking"
+      },
+      {
+        "t": 37.1000000000002,
+        "d": 551.088104000798,
+        "v": 10.138176517679941,
+        "frontM": 7131.088104000798,
+        "phase": "braking"
+      },
+      {
+        "t": 37.200000000000216,
+        "d": 551.3664454635351,
+        "v": 9.902408799398781,
+        "frontM": 7131.3664454635355,
+        "phase": "braking"
+      },
+      {
+        "t": 37.30000000000023,
+        "d": 551.6382378229868,
+        "v": 9.666641081117621,
+        "frontM": 7131.638237822986,
+        "phase": "braking"
+      },
+      {
+        "t": 37.40000000000025,
+        "d": 551.9034810791528,
+        "v": 9.430873362836461,
+        "frontM": 7131.903481079153,
+        "phase": "braking"
+      },
+      {
+        "t": 37.50000000000026,
+        "d": 552.1621752320333,
+        "v": 9.195105644555301,
+        "frontM": 7132.162175232033,
+        "phase": "braking"
+      },
+      {
+        "t": 37.60000000000028,
+        "d": 552.4143202816282,
+        "v": 8.959337926274141,
+        "frontM": 7132.4143202816285,
+        "phase": "braking"
+      },
+      {
+        "t": 37.700000000000294,
+        "d": 552.6599162279374,
+        "v": 8.723570207992982,
+        "frontM": 7132.659916227937,
+        "phase": "braking"
+      },
+      {
+        "t": 37.80000000000031,
+        "d": 552.898963070961,
+        "v": 8.487802489711822,
+        "frontM": 7132.898963070961,
+        "phase": "braking"
+      },
+      {
+        "t": 37.900000000000325,
+        "d": 553.1314608106991,
+        "v": 8.252034771430662,
+        "frontM": 7133.131460810699,
+        "phase": "braking"
+      },
+      {
+        "t": 38.00000000000034,
+        "d": 553.3574094471517,
+        "v": 8.016267053149502,
+        "frontM": 7133.357409447151,
+        "phase": "braking"
+      },
+      {
+        "t": 38.10000000000036,
+        "d": 553.5768089803186,
+        "v": 7.780499334868341,
+        "frontM": 7133.576808980319,
+        "phase": "braking"
+      },
+      {
+        "t": 38.20000000000037,
+        "d": 553.7896594101999,
+        "v": 7.544731616587181,
+        "frontM": 7133.7896594102,
+        "phase": "braking"
+      },
+      {
+        "t": 38.30000000000039,
+        "d": 553.9959607367956,
+        "v": 7.308963898306021,
+        "frontM": 7133.9959607367955,
+        "phase": "braking"
+      },
+      {
+        "t": 38.400000000000404,
+        "d": 554.1957129601058,
+        "v": 7.073196180024857,
+        "frontM": 7134.195712960106,
+        "phase": "braking"
+      },
+      {
+        "t": 38.50000000000042,
+        "d": 554.3889160801303,
+        "v": 6.837428461743689,
+        "frontM": 7134.38891608013,
+        "phase": "braking"
+      },
+      {
+        "t": 38.600000000000435,
+        "d": 554.5755700968693,
+        "v": 6.601660743462521,
+        "frontM": 7134.575570096869,
+        "phase": "braking"
+      },
+      {
+        "t": 38.70000000000045,
+        "d": 554.7556750103226,
+        "v": 6.365893025181353,
+        "frontM": 7134.755675010323,
+        "phase": "braking"
+      },
+      {
+        "t": 38.800000000000466,
+        "d": 554.9292308204905,
+        "v": 6.130125306900185,
+        "frontM": 7134.92923082049,
+        "phase": "braking"
+      },
+      {
+        "t": 38.90000000000048,
+        "d": 555.0962375273728,
+        "v": 5.894357588619017,
+        "frontM": 7135.096237527373,
+        "phase": "braking"
+      },
+      {
+        "t": 39.0000000000005,
+        "d": 555.2566951309694,
+        "v": 5.658589870337849,
+        "frontM": 7135.256695130969,
+        "phase": "braking"
+      },
+      {
+        "t": 39.10000000000051,
+        "d": 555.4106036312804,
+        "v": 5.422822152056681,
+        "frontM": 7135.4106036312805,
+        "phase": "braking"
+      },
+      {
+        "t": 39.20000000000053,
+        "d": 555.5579630283058,
+        "v": 5.187054433775513,
+        "frontM": 7135.5579630283055,
+        "phase": "braking"
+      },
+      {
+        "t": 39.300000000000544,
+        "d": 555.6987733220457,
+        "v": 4.951286715494345,
+        "frontM": 7135.698773322046,
+        "phase": "braking"
+      },
+      {
+        "t": 39.40000000000056,
+        "d": 555.8330345124999,
+        "v": 4.715518997213177,
+        "frontM": 7135.8330345125,
+        "phase": "braking"
+      },
+      {
+        "t": 39.500000000000576,
+        "d": 555.9607465996687,
+        "v": 4.479751278932009,
+        "frontM": 7135.960746599669,
+        "phase": "braking"
+      },
+      {
+        "t": 39.60000000000059,
+        "d": 556.0819095835517,
+        "v": 4.243983560650841,
+        "frontM": 7136.081909583551,
+        "phase": "braking"
+      },
+      {
+        "t": 39.70000000000061,
+        "d": 556.1965234641492,
+        "v": 4.008215842369673,
+        "frontM": 7136.196523464149,
+        "phase": "braking"
+      },
+      {
+        "t": 39.80000000000062,
+        "d": 556.3045882414611,
+        "v": 3.7724481240885055,
+        "frontM": 7136.304588241461,
+        "phase": "braking"
+      },
+      {
+        "t": 39.90000000000064,
+        "d": 556.4061039154875,
+        "v": 3.5366804058073376,
+        "frontM": 7136.406103915488,
+        "phase": "braking"
+      },
+      {
+        "t": 40.000000000000654,
+        "d": 556.5010704862283,
+        "v": 3.3009126875261696,
+        "frontM": 7136.501070486228,
+        "phase": "braking"
+      },
+      {
+        "t": 40.10000000000067,
+        "d": 556.5894879536834,
+        "v": 3.0651449692450017,
+        "frontM": 7136.589487953684,
+        "phase": "braking"
+      },
+      {
+        "t": 40.200000000000685,
+        "d": 556.6713563178529,
+        "v": 2.8293772509638337,
+        "frontM": 7136.671356317853,
+        "phase": "braking"
+      },
+      {
+        "t": 40.3000000000007,
+        "d": 556.7466755787369,
+        "v": 2.593609532682666,
+        "frontM": 7136.746675578737,
+        "phase": "braking"
+      },
+      {
+        "t": 40.400000000000716,
+        "d": 556.8154457363354,
+        "v": 2.357841814401498,
+        "frontM": 7136.815445736335,
+        "phase": "braking"
+      },
+      {
+        "t": 40.50000000000073,
+        "d": 556.8776667906482,
+        "v": 2.12207409612033,
+        "frontM": 7136.877666790648,
+        "phase": "braking"
+      },
+      {
+        "t": 40.60000000000075,
+        "d": 556.9333387416754,
+        "v": 1.8863063778391618,
+        "frontM": 7136.9333387416755,
+        "phase": "braking"
+      },
+      {
+        "t": 40.70000000000076,
+        "d": 556.982461589417,
+        "v": 1.6505386595579954,
+        "frontM": 7136.982461589417,
+        "phase": "braking"
+      },
+      {
+        "t": 40.80000000000078,
+        "d": 557.025035333873,
+        "v": 1.4147709412768295,
+        "frontM": 7137.025035333873,
+        "phase": "braking"
+      },
+      {
+        "t": 40.900000000000794,
+        "d": 557.0610599750435,
+        "v": 1.1790032229956635,
+        "frontM": 7137.0610599750435,
+        "phase": "braking"
+      },
+      {
+        "t": 41.00000000000081,
+        "d": 557.0905355129283,
+        "v": 0.9432355047144975,
+        "frontM": 7137.090535512928,
+        "phase": "braking"
+      },
+      {
+        "t": 41.100000000000826,
+        "d": 557.1134619475275,
+        "v": 0.7074677864333315,
+        "frontM": 7137.113461947528,
+        "phase": "braking"
+      },
+      {
+        "t": 41.20000000000084,
+        "d": 557.1298392788412,
+        "v": 0.4717000681521656,
+        "frontM": 7137.129839278841,
+        "phase": "braking"
+      },
+      {
+        "t": 41.30000000000086,
+        "d": 557.1396675068694,
+        "v": 0.23593234987099965,
+        "frontM": 7137.139667506869,
+        "phase": "braking"
+      },
+      {
+        "t": 41.40000000000087,
+        "d": 557.142946631612,
+        "v": 0.00016463158983364562,
+        "frontM": 7137.142946631612,
+        "phase": "braking"
+      },
+      {
+        "t": 41.400069827876834,
+        "d": 557.1429466332086,
+        "v": 0,
+        "frontM": 7137.142946633208,
+        "phase": "braking"
+      }
+    ],
+    "firstStopBeforeFull": false,
+    "serviceM": 379.86704653371316,
+    "allowanceM": 6,
+    "protectedM": 563.1429466332086,
+    "signedMarginM": 183.2759000994954,
+    "marginM": 183.2759000994954,
+    "selectedM": 185,
+    "selectionBasisM": 183.27590009958567,
+    "numericalDeltaM": 9.026734915096313e-11,
+    "refinement": [
+      {
+        "stepS": 0.08,
+        "distanceM": 557.1429466332914
+      },
+      {
+        "stepS": 0.04,
+        "distanceM": 557.1429466332988,
+        "deltaM": 7.389644451905042e-12
+      },
+      {
+        "stepS": 0.02,
+        "distanceM": 557.1429466332086,
+        "deltaM": 9.026734915096313e-11
+      }
+    ],
+    "usedStepS": 0.02,
+    "availableM": null,
+    "residualM": null
+  },
+  "selectedMarginM": 185,
+  "warnings": [
+    "Sampled engineering study. Not a certified ATP/ETCS algorithm or approved fleet model.",
+    "All outputs describe first forward arrest; continued holding and rollback after that arrest are not simulated. Early arrest is flagged for review.",
+    "Uniform mass over train length; gradient gravity only. No curvature, resistance, wheel slip dynamics, separate track brakes, BAM or jerk-limited service curve.",
+    "Time-step comparison is numerical sensitivity, not a rigorous error bound. No continuous speed/chainage maximum or certified envelope is asserted.",
+    "Ideal service-target distance is a reference at the commanded speed and specified constant service deceleration; it is not a service-control simulation.",
+    "Peak speed is the sampled maximum attained speed, not an authorised or permitted speed. Civil limits are used only to filter entry samples; intermediate speed-limit compliance is not evaluated.",
+    "Location allowances are additive clearances; uncertainty is not propagated through changing gradient or speed profiles. Check applicability near discontinuities."
+  ],
+  "inputDigest": "b8a607ed79fbf2134a899fac5334261738820435b22c0fe1395e9fac2360f2f2"
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "name": "Reference corridor",
+  "revision": "P01",
+  "author": "",
+  "basis": "Synthetic demonstration — replace and review all inputs",
+  "vehicle": {
+    "id": "synthetic-metro",
+    "name": "Metro · 4-car reference",
+    "status": "Synthetic — demonstration only",
+    "evidence": "Invented parameter set for software demonstration. Not a real fleet specification.",
+    "massT": 160,
+    "lengthM": 80,
+    "maxSpeedKph": 100,
+    "tractionA": 0.9,
+    "brakeA": 0.9,
+    "serviceA": 0.65,
+    "brakeCurve": [],
+    "tractionCurve": []
+  },
+  "alignment": [
+    {
+      "fromM": 0,
+      "toM": 2000,
+      "gradientPermille": 0,
+      "speedKph": 80
+    },
+    {
+      "fromM": 2000,
+      "toM": 4000,
+      "gradientPermille": -18,
+      "speedKph": 90
+    },
+    {
+      "fromM": 4000,
+      "toM": 6500,
+      "gradientPermille": 12,
+      "speedKph": 90
+    },
+    {
+      "fromM": 6500,
+      "toM": 9000,
+      "gradientPermille": -25,
+      "speedKph": 80
+    },
+    {
+      "fromM": 9000,
+      "toM": 14000,
+      "gradientPermille": 0,
+      "speedKph": 80
+    }
+  ],
+  "scenario": {
+    "direction": 1,
+    "reactionS": 1,
+    "tractionDisableS": 0.8,
+    "brakeDelayS": 0.8,
+    "buildUpS": 1.2,
+    "overspeedKph": 3,
+    "speedErrorKph": 1,
+    "frontErrorM": 3,
+    "rearErrorM": 3,
+    "rollbackM": 0,
+    "extraM": 0,
+    "roundM": 5,
+    "obstacleM": null,
+    "dtS": 0.08,
+    "toleranceM": 0.05,
+    "maxTimeS": 600,
+    "method": "trajectory",
+    "constantGradePermille": 0
+  },
+  "study": {
+    "fromM": 1000,
+    "toM": 9000,
+    "spacingM": 500,
+    "speedsKph": [
+      20,
+      40,
+      60,
+      80
+    ]
+  }
+}

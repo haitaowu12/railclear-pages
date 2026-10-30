@@ -1,0 +1,4 @@
+id,name,route_id,direction,from_m,to_m,reference_kind,reference_id,protected_point_m,quantity,round_m,enabled,text_encoding
+"allocation-1","Track section 1","route-1","1","1000","4000","track-section","SYN-TC-1","","selectedMarginM","5","true","railclear-apostrophe-v1"
+"allocation-2","Track section 2","route-1","1","4000","6500","track-section","SYN-TC-2","","selectedMarginM","5","true","railclear-apostrophe-v1"
+"allocation-3","Track section 3","route-1","1","6500","9000","track-section","SYN-TC-3","","selectedMarginM","5","true","railclear-apostrophe-v1"

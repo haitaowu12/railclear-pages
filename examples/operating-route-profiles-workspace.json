@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "id": "synthetic-route-profile-comparison",
+  "name": "Synthetic section / fleet / route comparison",
+  "revision": "P01",
+  "author": "",
+  "basis": "Synthetic demonstration — replace and review all inputs",
+  "activeStudyId": "case-1",
+  "vehicles": [
+    {
+      "id": "vehicle-1",
+      "spec": {
+        "id": "synthetic-metro",
+        "name": "Metro · 4-car reference",
+        "status": "Synthetic — demonstration only",
+        "evidence": "Invented parameter set for software demonstration. Not a real fleet specification.",
+        "massT": 160,
+        "lengthM": 80,
+        "maxSpeedKph": 100,
+        "tractionA": 0.9,
+        "brakeA": 0.9,
+        "serviceA": 0.65,
+        "brakeCurve": [],
+        "tractionCurve": []
+      }
+    },
+    {
+      "id": "vehicle-2",
+      "spec": {
+        "id": "synthetic-regional",
+        "name": "Regional · 3-car reference",
+        "status": "Synthetic — demonstration only",
+        "evidence": "Invented parameter set. No manufacturer braking guarantee.",
+        "massT": 180,
+        "lengthM": 75,
+        "maxSpeedKph": 160,
+        "tractionA": 0.6,
+        "brakeA": 0.75,
+        "serviceA": 0.5,
+        "brakeCurve": [],
+        "tractionCurve": []
+      }
+    },
+    {
+      "id": "vehicle-3",
+      "spec": {
+        "id": "synthetic-lrv",
+        "name": "Light rail · 2-unit reference",
+        "status": "Synthetic — demonstration only",
+        "evidence": "Invented parameter set. Track brakes are not modeled separately.",
+        "massT": 90,
+        "lengthM": 60,
+        "maxSpeedKph": 80,
+        "tractionA": 1.1,
+        "brakeA": 1.05,
+        "serviceA": 0.75,
+        "brakeCurve": [],
+        "tractionCurve": []
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "Base alignment",
+      "datum": "Project chainage — confirm datum",
+      "alignment": [
+        {
+          "fromM": 0,
+          "toM": 2000,
+          "gradientPermille": 0,
+          "speedKph": 80
+        },
+        {
+          "fromM": 2000,
+          "toM": 4000,
+          "gradientPermille": -18,
+          "speedKph": 90
+        },
+        {
+          "fromM": 4000,
+          "toM": 6500,
+          "gradientPermille": 12,
+          "speedKph": 90
+        },
+        {
+          "fromM": 6500,
+          "toM": 9000,
+          "gradientPermille": -25,
+          "speedKph": 80
+        },
+        {
+          "fromM": 9000,
+          "toM": 14000,
+          "gradientPermille": 0,
+          "speedKph": 80
+        }
+      ]
+    },
+    {
+      "id": "route-variant",
+      "name": "Synthetic grade variant",
+      "datum": "Project chainage — confirm datum",
+      "alignment": [
+        {
+          "fromM": 0,
+          "toM": 2000,
+          "gradientPermille": 0,
+          "speedKph": 80
+        },
+        {
+          "fromM": 2000,
+          "toM": 4000,
+          "gradientPermille": -18,
+          "speedKph": 90
+        },
+        {
+          "fromM": 4000,
+          "toM": 6500,
+          "gradientPermille": 12,
+          "speedKph": 90
+        },
+        {
+          "fromM": 6500,
+          "toM": 9000,
+          "gradientPermille": -30,
+          "speedKph": 80
+        },
+        {
+          "fromM": 9000,
+          "toM": 14000,
+          "gradientPermille": 0,
+          "speedKph": 80
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "profile-1",
+      "name": "Base failure profile",
+      "scenario": {
+        "direction": 1,
+        "reactionS": 1,
+        "tractionDisableS": 0.8,
+        "brakeDelayS": 0.8,
+        "buildUpS": 1.2,
+        "overspeedKph": 3,
+        "speedErrorKph": 1,
+        "frontErrorM": 3,
+        "rearErrorM": 3,
+        "rollbackM": 0,
+        "extraM": 0,
+        "roundM": 5,
+        "obstacleM": null,
+        "dtS": 0.08,
+        "toleranceM": 0.05,
+        "maxTimeS": 600,
+        "method": "trajectory",
+        "constantGradePermille": 0
+      }
+    },
+    {
+      "id": "delayed-command",
+      "name": "Synthetic delayed command",
+      "scenario": {
+        "direction": 1,
+        "reactionS": 2,
+        "tractionDisableS": 0.8,
+        "brakeDelayS": 1.3,
+        "buildUpS": 1.2,
+        "overspeedKph": 3,
+        "speedErrorKph": 1,
+        "frontErrorM": 3,
+        "rearErrorM": 3,
+        "rollbackM": 0,
+        "extraM": 0,
+        "roundM": 5,
+        "obstacleM": null,
+        "dtS": 0.08,
+        "toleranceM": 0.05,
+        "maxTimeS": 600,
+        "method": "trajectory",
+        "constantGradePermille": 0
+      }
+    }
+  ],
+  "allocations": [
+    {
+      "id": "allocation-1",
+      "name": "Track section 1",
+      "routeId": "route-1",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 1000,
+      "toM": 4000,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-1",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    },
+    {
+      "id": "allocation-2",
+      "name": "Track section 2",
+      "routeId": "route-1",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 4000,
+      "toM": 6500,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-2",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    },
+    {
+      "id": "allocation-3",
+      "name": "Track section 3",
+      "routeId": "route-1",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 6500,
+      "toM": 9000,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-3",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    },
+    {
+      "id": "allocation-1-variant",
+      "name": "Track section 1 / variant",
+      "routeId": "route-variant",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 1000,
+      "toM": 4000,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-1",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    },
+    {
+      "id": "allocation-2-variant",
+      "name": "Track section 2 / variant",
+      "routeId": "route-variant",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 4000,
+      "toM": 6500,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-2",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    },
+    {
+      "id": "allocation-3-variant",
+      "name": "Track section 3 / variant",
+      "routeId": "route-variant",
+      "direction": 1,
+      "enabled": true,
+      "fromM": 6500,
+      "toM": 9000,
+      "referenceKind": "track-section",
+      "referenceId": "SYN-TC-3",
+      "protectedPointM": null,
+      "metric": "selectedMarginM",
+      "roundM": 5
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "case-1",
+      "name": "Metro · 4-car reference",
+      "vehicleId": "vehicle-1",
+      "routeId": "route-1",
+      "profileId": "profile-1",
+      "enabled": true
+    },
+    {
+      "id": "case-2",
+      "name": "Regional · 3-car reference",
+      "vehicleId": "vehicle-2",
+      "routeId": "route-1",
+      "profileId": "profile-1",
+      "enabled": true
+    },
+    {
+      "id": "case-3",
+      "name": "Light rail · 2-unit reference",
+      "vehicleId": "vehicle-3",
+      "routeId": "route-1",
+      "profileId": "profile-1",
+      "enabled": true
+    },
+    {
+      "id": "case-1-delay",
+      "name": "Metro · 4-car reference / delayed",
+      "vehicleId": "vehicle-1",
+      "routeId": "route-1",
+      "profileId": "delayed-command",
+      "enabled": true
+    },
+    {
+      "id": "case-2-delay",
+      "name": "Regional · 3-car reference / delayed",
+      "vehicleId": "vehicle-2",
+      "routeId": "route-1",
+      "profileId": "delayed-command",
+      "enabled": true
+    },
+    {
+      "id": "case-3-delay",
+      "name": "Light rail · 2-unit reference / delayed",
+      "vehicleId": "vehicle-3",
+      "routeId": "route-1",
+      "profileId": "delayed-command",
+      "enabled": true
+    },
+    {
+      "id": "case-1-variant",
+      "name": "Metro · 4-car reference / grade variant",
+      "vehicleId": "vehicle-1",
+      "routeId": "route-variant",
+      "profileId": "profile-1",
+      "enabled": true
+    },
+    {
+      "id": "case-2-variant",
+      "name": "Regional · 3-car reference / grade variant",
+      "vehicleId": "vehicle-2",
+      "routeId": "route-variant",
+      "profileId": "profile-1",
+      "enabled": true
+    },
+    {
+      "id": "case-3-variant",
+      "name": "Light rail · 2-unit reference / grade variant",
+      "vehicleId": "vehicle-3",
+      "routeId": "route-variant",
+      "profileId": "profile-1",
+      "enabled": true
+    }
+  ],
+  "study": {
+    "fromM": 1000,
+    "toM": 9000,
+    "spacingM": 500,
+    "speedsKph": [
+      20,
+      40,
+      60,
+      80
+    ]
+  },
+  "probe": {
+    "startM": 1000,
+    "speedKph": 80
+  }
+}
