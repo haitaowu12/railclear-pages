@@ -1,12 +1,12 @@
 import { esc } from "./exports.mjs";
 export const PALETTE = [
-  "#126b59",
-  "#426ca9",
+  "#2445b5",
+  "#b36b28",
   "#aa6419",
   "#8c54a0",
   "#b53e50",
-  "#247f91",
-  "#627b2d",
+  "#546478",
+  "#6659a3",
   "#774c3b",
   "#5b6585",
   "#9b4775",
@@ -44,11 +44,11 @@ const svgFrame = (title, body, identity, legend = []) => {
     .map((item, i) => {
       const x = 65 + (i % 2) * 415,
         y = 355 + Math.floor(i / 2) * 28,
-        style = item.black ? 'stroke="#1a302a"' : lineStyle(i);
+        style = item.black ? 'stroke="#252830"' : lineStyle(i);
       return `<g><title>${esc(item.label)}</title><line x1="${x}" x2="${x + 20}" y1="${y - 4}" y2="${y - 4}" ${style} stroke-width="3"/><text x="${x + 27}" y="${y}" style="font-size:11px">${esc(labelText(item.label))}</text></g>`;
     })
     .join("");
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 ${height}" role="img" aria-label="${esc(title)}" style="font:12px system-ui;fill:#566e5b"><metadata>${esc(JSON.stringify({ ...identity, legend: legend.map((x) => x.label) }))}</metadata><rect width="900" height="${height}" fill="white"/>${body}${keys}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 ${height}" role="img" aria-label="${esc(title)}" style="font:12px system-ui;fill:#626b78"><metadata>${esc(JSON.stringify({ ...identity, legend: legend.map((x) => x.label) }))}</metadata><rect width="900" height="${height}" fill="white"/>${body}${keys}</svg>`;
 };
 function axes(maxX, maxY, xLabel, yLabel, minX = 0) {
   const x = (d) => 65 + ((d - minX) / (maxX - minX || 1)) * 805,
@@ -214,12 +214,12 @@ export function envelopeSVG(result, group, metric = "selectionBasisM") {
             `<path d="${path(s.values)}" fill="none" ${lineStyle(s.i)} stroke-width="1.7" opacity=".7"/>`,
         )
         .join("") +
-      `<path d="${path(envelope)}" fill="none" stroke="#1a302a" stroke-width="3"/>` +
+      `<path d="${path(envelope)}" fill="none" stroke="#252830" stroke-width="3"/>` +
       envelope
         .filter((r) => r.value !== null)
         .map(
           (r) =>
-            `<circle cx="${x(r.start)}" cy="${y(r.value)}" r="3" fill="#1a302a"/>`,
+            `<circle cx="${x(r.start)}" cy="${y(r.value)}" r="3" fill="#252830"/>`,
         )
         .join(""),
   );

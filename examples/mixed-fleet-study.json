@@ -2,7 +2,7 @@
   "kind": "railclear-workspace-study",
   "schemaVersion": 2,
   "engine": "railclear-point-mass/0.4.0",
-  "generatedAt": "2026-10-30T05:37:07.513Z",
+  "generatedAt": "2026-10-30T06:09:59.473Z",
   "status": "computed",
   "workspace": {
     "schemaVersion": 2,
@@ -6466,7 +6466,7 @@
       },
       "result": {
         "engine": "railclear-point-mass/0.4.0",
-        "generatedAt": "2026-10-30T05:37:07.008Z",
+        "generatedAt": "2026-10-30T06:09:59.006Z",
         "status": "computed",
         "caseCount": 104,
         "alignmentCompilation": {
@@ -20493,7 +20493,7 @@
       },
       "result": {
         "engine": "railclear-point-mass/0.4.0",
-        "generatedAt": "2026-10-30T05:37:07.285Z",
+        "generatedAt": "2026-10-30T06:09:59.272Z",
         "status": "computed",
         "caseCount": 104,
         "alignmentCompilation": {
@@ -34667,7 +34667,7 @@
       },
       "result": {
         "engine": "railclear-point-mass/0.4.0",
-        "generatedAt": "2026-10-30T05:37:07.504Z",
+        "generatedAt": "2026-10-30T06:09:59.465Z",
         "status": "computed",
         "caseCount": 104,
         "alignmentCompilation": {

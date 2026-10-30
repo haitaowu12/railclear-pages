@@ -1,11 +1,11 @@
 {
-  "source_commit": "cd63002446cbf019e35c231c8f8aa6e585acf26b",
+  "source_commit": "9ed14a39c654c651f5061a188149aa7b16d94437",
   "hosting": "GitHub Pages branch publishing",
   "files": [
     {
       "path": "README.md",
-      "bytes": 2311,
-      "sha256": "2bb7ee8730adeb27e0e23bcd131f0b2d92a86825a35b7dac36f83436c530a67f"
+      "bytes": 2403,
+      "sha256": "4ce21b88707dfd544267218071b0323bedf26ad9c49d8a237340c9798273b376"
     },
     {
       "path": "docs/CALCULATION-CONTRACT.md",
@@ -40,27 +40,27 @@
     {
       "path": "examples/common-entry-traces.csv",
       "bytes": 282902,
-      "sha256": "0af685901f95c0b8faaa31e3625da02a2ad98b039bf9afc295d1896985d4502a"
+      "sha256": "4772488ad1cca8cb460b23f9fbeb676088ffac1f14c3cb7e9c08865bd24c8001"
     },
     {
       "path": "examples/continuous-section-bounds.csv",
       "bytes": 32039,
-      "sha256": "ba469ef8de7f71ab060d2069bd2d1cec7ca3d8c07620d49bdffc1134581718bb"
+      "sha256": "0d9901e55c0e655cfda8b30c83e11b9f2d8ed222d7827b8c89e1ceaed02562c7"
     },
     {
       "path": "examples/fleet-cases.csv",
       "bytes": 155275,
-      "sha256": "0482c872ffcd6fbbe10845b7ab6e82ccc984a04af87fb1856bd8427f00c0c8d1"
+      "sha256": "8be70b0017eb04ece0c04b22b4281b4209abbea771482a2aaf5d90b26ce95657"
     },
     {
       "path": "examples/fleet-envelopes.csv",
       "bytes": 48092,
-      "sha256": "fbee1cbc71490b0b4ea9989dc21edb965f135e84a1d75bfd20584b18fb1820bb"
+      "sha256": "31a21029d002f30ca4c43cab4baef4e6914a796591c1246abdae3fb8430701fa"
     },
     {
       "path": "examples/mixed-fleet-study.json",
       "bytes": 1469889,
-      "sha256": "1dc3f437e0873a0c2ee71f4d2c9cf6c5db0fcc5792a5c2ccd71761a8dfb1b622"
+      "sha256": "1c6c442bb78a43d079252a2589a25179288e8e9bb8554f417529be28459d0a4d"
     },
     {
       "path": "examples/mixed-fleet-workspace.json",
@@ -69,8 +69,8 @@
     },
     {
       "path": "examples/operating-route-profiles-report.html",
-      "bytes": 6033205,
-      "sha256": "1102ca7d623dc65d3e0267b74e8d2f70b6ce3559a34a928d623a355920609a9e"
+      "bytes": 6033474,
+      "sha256": "05328c809ec53cfe26106f6f0726cd7833e2112c91e68c76b66377b5c6ea4fb7"
     },
     {
       "path": "examples/operating-route-profiles-workspace.json",
@@ -79,8 +79,8 @@
     },
     {
       "path": "examples/reference-fleet-report.html",
-      "bytes": 2050978,
-      "sha256": "eb930f6bc763e37a867550d4047235b41da03ffd0639ed9c3b004b57c6b25a57"
+      "bytes": 2051118,
+      "sha256": "afa4336019d22f8a0244cc85510dfc8c32c57fe7aa64a297ddc7d7064861ebcb"
     },
     {
       "path": "examples/reference-project.json",
@@ -90,17 +90,17 @@
     {
       "path": "examples/reference-register.csv",
       "bytes": 18730,
-      "sha256": "2b9399da9eb93a3a32b03a74de1c86d39be7e780dc99f7240ed700530d769ea2"
+      "sha256": "7bd6d87bc326a603bfa5f3c4406a2c4229a792501d9bc730d1786ae13488a673"
     },
     {
       "path": "examples/reference-report.html",
-      "bytes": 250904,
-      "sha256": "e1930056a497dbadc346f790e2796c5c4af743719bb8b9b4d3cf16527fde8ffa"
+      "bytes": 250909,
+      "sha256": "f526c13b891d2940d4d9f4f1cf2aead466ff315755c99aa4577da9eabac861d4"
     },
     {
       "path": "examples/reference-study.json",
       "bytes": 162320,
-      "sha256": "17414f81d6955ecadcf820f7efad8a7694eca7cce3b37c889fd699632ec6d1cb"
+      "sha256": "c09460dee3f4da83893de489cecab7686dd34fbb76c73c7ca5110cc04945a705"
     },
     {
       "path": "examples/reference-trace.csv",
@@ -110,17 +110,17 @@
     {
       "path": "examples/reference-trajectory.svg",
       "bytes": 16189,
-      "sha256": "0fd0a3abee625821411d3884023fe326ef66f053cd17fd2bacaacb621ed92d6f"
+      "sha256": "fc5341b5a5a593da46286c65d2d87280c7d64da352bbc7462def4cc32a94a0fc"
     },
     {
       "path": "examples/section-allocations.csv",
       "bytes": 1875,
-      "sha256": "a7b50efeeb4a1b24e8ee78107ca655dacbc62dbf10745d8396d8a869661908dd"
+      "sha256": "0946a5afd1e1923a4209a8809421ee63ddcbeac1b1844e2beb5d2f2d023cb587"
     },
     {
       "path": "index.html",
-      "bytes": 424,
-      "sha256": "df4fdea9dcf2ce31492e20265cb31690b7bebd3c4358f0a1c414eae6e74d0634"
+      "bytes": 481,
+      "sha256": "d86100085f5f46d390ce1e974f577550cf54f92584e4d8cda6cbee738b5d033e"
     },
     {
       "path": "src/algorithms.mjs",
@@ -134,8 +134,8 @@
     },
     {
       "path": "src/app.mjs",
-      "bytes": 72297,
-      "sha256": "e5b0735cb301b2d38cefcc4ac11fa60b2476dcbaff51b3a12db670996cbe1e78"
+      "bytes": 72535,
+      "sha256": "72b59f6a4d28c4b3a0c042e32cd30ab31ca23c0f8d72f4a6d93e68c52150ef00"
     },
     {
       "path": "src/bounds.mjs",
@@ -145,7 +145,7 @@
     {
       "path": "src/charts.mjs",
       "bytes": 4197,
-      "sha256": "e434632800f5b7db3efc814142a56276e99da768230bb0d01c80deff11982c75"
+      "sha256": "7a7a289a3856885ade37070ae954b19faffeefcc86a92839ad9d3ba5f62ad905"
     },
     {
       "path": "src/data.mjs",
@@ -164,8 +164,8 @@
     },
     {
       "path": "src/exports.mjs",
-      "bytes": 9334,
-      "sha256": "6784a82b159b7ab0cf2223c0e468ddd5c5930195767195e95e47387abd854ee8"
+      "bytes": 9339,
+      "sha256": "96fbf05d34ea2837d4a68b219ea95d5db8688d29e48cd0d56e6be2e9abcd906d"
     },
     {
       "path": "src/fleet-view.mjs",
@@ -214,13 +214,13 @@
     },
     {
       "path": "src/study-view.mjs",
-      "bytes": 16311,
-      "sha256": "1ccac944c35a3e47b994f01b8ffbf3161c5ca689dc6f1d2397ddabca0b104075"
+      "bytes": 16437,
+      "sha256": "cc47dae39b808b4552fd35b8b1920558c0b61695a5cf345ee42e18e0ec18537b"
     },
     {
       "path": "src/style.css",
       "bytes": 40376,
-      "sha256": "1c09e8d4ebe327393f8fb6e5e546be54237854a43610633deeb066562d190ded"
+      "sha256": "d917cddf770e12089ad316fc13cad7465e3696344de669fce3a2b37d6b75e42d"
     },
     {
       "path": "src/worker.mjs",
@@ -230,12 +230,22 @@
     {
       "path": "src/workspace-charts.mjs",
       "bytes": 10706,
-      "sha256": "c32d71ec6fb14ebf0f6de04fe294a219db9e62c25126bc19ee74275f8ecc3cd1"
+      "sha256": "14e86bb4ec026ed038831c2e4bc71a87efb4b93b9170e70cda700d31a05e4c2e"
+    },
+    {
+      "path": "src/workspace-context.mjs",
+      "bytes": 2256,
+      "sha256": "32fcacf2dd6052cf376ec24cc703a0b34644cfe7d759c5cfb8b414201d939958"
     },
     {
       "path": "src/workspace-exports.mjs",
-      "bytes": 21831,
-      "sha256": "499108bc8356c71527b26e22cae2784d0d4161629033fc9efca91aaecc96107f"
+      "bytes": 22044,
+      "sha256": "3224b5abaa7d2b705b67019378bf3fba3f0fd1a11db200c91396cd407be24423"
+    },
+    {
+      "path": "src/workspace.css",
+      "bytes": 17251,
+      "sha256": "a27e210b34393b97685d8e55e4e7bac66f3e41772eb60e7dedd4f33acef70aec"
     },
     {
       "path": "src/workspace.mjs",

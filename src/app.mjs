@@ -1,3 +1,5 @@
+import {algorithmName} from "./algorithms.mjs";
+import {workspaceContext} from "./workspace-context.mjs";
 import {alignmentDraftRows,alignmentRowsCSV} from "./alignment-editor.mjs";
 import {inputTabs,inputsOverview,methodsView,resultsView} from "./study-view.mjs";
 import { saveWorkspaceSnapshot, saveDraftSnapshot, readBrowserSnapshot, recoverBrowserSaving, WORKSPACE_KEY, DRAFTS_KEY } from "./storage.mjs";
@@ -134,10 +136,10 @@ const field = (label, path, value, unit = "", step = "0.1") =>
 const txt = (label, path, value) =>
   `<label class="field"><span>${e(label)}</span><input data-text="${e(path)}" value="${e(value ?? "")}" aria-label="${e(label)}"></label>`;
 const navs = [
- ["results","01","Study results"],
- ["inputs","02","Study inputs"],
+ ["results","01","Study"],
+ ["inputs","02","Inputs"],
  ["fleet","03","Sections & fleet"],
- ["method","04","Calculation methods"],
+ ["method","04","Methods"],
 ];
 const inputViews=['inputs','vehicles','profile','alignment','project'];
 const viewIds=[...navs.map(([id])=>id),'study','report',...inputViews];
@@ -161,8 +163,8 @@ function status() {
   if (alignmentDraft !== null || curveDraft !== null)
     return "Unapplied draft · apply or discard";
   if (busy) return "Calculating…";
-  if (stale) return "Inputs changed · run required";
-  if (fleetResult?.status === "computed") return "Sampled run complete";
+  if (stale) return fleetResult ? "Inputs changed · run required" : "Not calculated";
+  if (fleetResult?.status === "computed") return "Current";
   if (fleetResult?.status === "incomplete")
     return "Incomplete · review allocations";
   if (fleetResult?.status === "no-applicable-cases")
@@ -170,19 +172,17 @@ function status() {
   return "Review required";
 }
 function shell() {
-  const titles = {results:"Study results",inputs:"Study inputs",profile:"Study inputs",project:"Study inputs",fleet:"Sections & fleet",study:"Governing alternative",alignment:"Study inputs",vehicles:"Study inputs",method:"Calculation methods",report:"Study results"};
-  $("#app").innerHTML = `<a class="skip-link" href="#content">Skip to workspace</a>
-    <aside class="sidebar"><a class="brand" href="#results" data-nav="results">${icon}<span>RailClear</span></a>
-    <button id="navigation-toggle" class="navigation-toggle" aria-controls="main-navigation" aria-expanded="false">Menu</button><nav id="main-navigation" aria-label="Main navigation">${navs.map(([id, , name]) => `<a href="#${id}" data-nav="${id}" class="${navCurrent(id) ? "active" : ""}" ${navCurrent(id) ? 'aria-current="page"' : ""}>${navigationIcon(id)}<span>${name}</span></a>`).join("")}</nav>
-    <div class="sidebar-bottom"><span class="local-dot"></span> Local workspace<p>Calculations stay on this device.</p><small>RailClear ${VERSION}</small></div></aside>
-    <div class="workspace ${["results","report"].includes(tab)?"results-workspace":""}"><header class="topbar"><div class="project-context"><strong>${e(p.name)}</strong><span>${e(p.revision)}</span></div>
-    <label class="active-alternative">Active alternative<select data-active-study aria-label="Active alternative">${workspace.alternatives.map((a) => `<option value="${a.id}" ${a.id === workspace.activeStudyId ? "selected" : ""}>${e(a.name)}</option>`).join("")}</select></label>
-    <div class="file-actions"><button data-action="import-project" class="quiet">Open project</button><button data-action="save-project" class="quiet">Save workspace JSON</button></div></header>
-    <main><div class="heading"><h1 id="workspace-title" tabindex="-1">${titles[tab]}</h1><div class="heading-actions"><span class="state ${stale ? "pending" : ""}" id="state" role="status">${status()}</span><button class="primary" data-action="run" ${busy ? "disabled" : ""}>${busy ? "Calculating…" : "Run study"}</button>${busy ? '<button data-action="cancel">Cancel</button>' : ""}</div></div>
-    <div class="basis-banner"><strong>${e(p.vehicle.status)}</strong><span class="basis-note">Independent engineering review required before downstream design use.</span></div>
-    <div id="storage-status" role="status">${storageNotice()}</div><div id="error" role="alert">${error ? `<div class="error">${e(error)} <button data-action="restore-valid">Restore valid inputs</button></div>` : ""}</div><div id="progress" role="status" aria-live="polite">${e(progress)}</div><div id="content" tabindex="-1">${inputViews.includes(tab)?inputTabs(tab):""}${content()}</div></main>
-    <footer><span>${ENGINE} · SI units</span><span>Source, assumptions and numerical limits accompany every export.</span></footer></div>
-    <input id="project-file" type="file" accept=".json" hidden><input id="alignment-file" type="file" accept=".csv,.txt" hidden><input id="library-file" type="file" accept=".json" hidden><input id="sections-file" type="file" accept=".csv,.txt" hidden>`;
+  const titles={results:'Section allocations',inputs:'Input records',profile:'Failure profile',project:'Study record',fleet:'Sections & fleet',study:'Alternative study',alignment:'Alignment',vehicles:'Vehicle sheet',method:'Calculation methods',report:'Section allocations'};
+  const ready=fleetResult&&!stale&&!busy;
+  const isResults=['results','report'].includes(tab);
+  const compact=window.matchMedia('(max-width:800px)').matches;
+  $("#app").innerHTML=`<a class="skip-link" href="#content">Skip to workspace</a>
+  <header class="appbar"><a class="brand" href="#results" data-nav="results">RailClear</a><div class="project-context"><strong>${e(workspace.name)}</strong><span>${e(workspace.revision)}</span></div><div class="file-actions"><button data-action="import-project" class="quiet">Open</button><button data-action="save-project" class="quiet">Save inputs</button></div></header>
+  <div class="nav-bar"><button id="navigation-toggle" class="navigation-toggle" aria-controls="main-navigation" aria-expanded="false" hidden>Menu</button><nav id="main-navigation" aria-label="Main navigation">${navs.map(([id,,label])=>`<a href="#${id}" data-nav="${id}" ${navCurrent(id)?'class="active" aria-current="page"':''}>${label}</a>`).join('')}</nav>${!isResults?`<label class="active-alternative"><span>Alternative</span><select data-active-study aria-label="Active alternative">${workspace.alternatives.map(a=>`<option value="${e(a.id)}" ${a.id===workspace.activeStudyId?'selected':''}>${e(a.name)}</option>`).join('')}</select></label>`:''}</div>
+  <main class="workspace ${isResults?'results-workspace':''}"><div class="heading"><h1 id="workspace-title" tabindex="-1">${isResults&&resultView==='report'?'Study report':titles[tab]}</h1><div class="heading-actions"><span class="state ${stale?'pending':''}" id="state" role="status">${status()}</span><button class="primary run-action ${ready?'ready':''}" data-action="run" ${busy?'disabled':''}>${busy?'Running…':ready?'Run again':'Run study'}</button>${busy?'<button data-action="cancel">Cancel</button>':''}${isResults&&resultView==='report'?'':`<button data-result-view="report" ${ready?'':'disabled'}>View report</button>`}<button class="pack-action" data-fleet-export="study-pack" ${ready?'':'disabled'}>Download study pack</button></div></div>
+  ${isResults&&resultView==='report'?'':`<div class="basis-banner"><span>${e(p.vehicle.status)}</span><span>Independent engineering review required.</span></div>`}<div id="storage-status" role="status">${storageNotice()}</div><div id="error" role="alert">${error?`<div class="error">${e(error)} <button data-action="restore-valid">Restore valid inputs</button></div>`:''}</div><div id="progress" role="status" aria-live="polite">${e(progress)}</div>
+  <div class="work-area ${isResults&&resultView!=='report'?'with-context':''}">${isResults&&resultView!=='report'?workspaceContext(workspace,p,{compact}):''}<div id="content" tabindex="-1">${inputViews.includes(tab)?inputTabs(tab):''}${content()}</div></div></main>
+  <input id="project-file" type="file" accept=".json" hidden><input id="alignment-file" type="file" accept=".csv,.txt" hidden><input id="library-file" type="file" accept=".json" hidden><input id="sections-file" type="file" accept=".csv,.txt" hidden>`;
   bind();
 }
 
@@ -353,7 +353,8 @@ function bind() {
   $('[data-alignment-add]')?.addEventListener('click',()=>{const rows=alignmentDraftRows(alignmentDraft??alignmentCSV());if(rows.length>=20000)return showError('Alignment is limited to 20,000 rows.');rows.push([rows.at(-1)?.[1]??'', '', '', '']);alignmentPage=Math.floor((rows.length-1)/50);setAlignmentRows(rows);shell();});
   document.querySelectorAll('[data-alignment-page]').forEach(el=>el.onclick=()=>{alignmentPage+=Number(el.dataset.alignmentPage);shell();});
   document.querySelectorAll('[data-algorithm]').forEach(el=>el.onchange=()=>{try{assertNoDrafts();mutate(()=>p.scenario.algorithm=el.dataset.algorithm);shell();document.querySelector(`[data-algorithm="${el.dataset.algorithm}"]`)?.focus();}catch(ex){showError(ex.message);shell();}});
-  document.querySelectorAll('[data-result-view]').forEach(el=>el.onclick=()=>{resultView=el.dataset.resultView;shell();});
+  document.querySelectorAll('[data-result-view]').forEach(el=>el.onclick=()=>{resultView=el.dataset.resultView;if(!['results','report'].includes(tab)){navigateView('results',true);}else shell();});
+  $('[data-print-report]')?.addEventListener('click',()=>window.print());
   document.querySelectorAll('[data-inspect-member]').forEach(el=>el.onclick=()=>{try{inspectSectionSample(el);}catch(ex){showError(ex.message);}});
 
   for (const button of document.querySelectorAll('[data-recovery-copy]')) button.onclick = () => {
@@ -374,7 +375,7 @@ function bind() {
         onApply: candidate => {
           undoWorkspace = structuredClone(workspace);
           mutate(() => { workspace = candidate; p = resolveProject(workspace); });
-          progress = "Inputs applied. Run the workspace to refresh results.";
+          progress = "";
           shell();
         },
         returnFocus: () => $(`[data-input-editor="${kind}"]`),
@@ -765,7 +766,7 @@ function openBrowserRecovery() {
   editorEpoch++;
   const snapshot = readBrowserSnapshot(localStorage);
   const dialog = document.createElement('dialog');dialog.className='section-drawer recovery-dialog';dialog.setAttribute('aria-labelledby','recovery-title');
-  dialog.innerHTML=`<div class="section-edit-form"><header class="drawer-header"><h2 id="recovery-title">Recover browser saving</h2></header><div class="drawer-body"><p>Use <strong>${e(workspace.name)}</strong> as this browser’s saved workspace. The existing browser data will be kept as a downloadable copy in Study results.</p><p>Recovery JSON also saves unfinished alignment and curve drafts so you can reopen them later. Earlier browser data remains available in the file for inspection.</p><button data-recovery-download>Save recovery JSON</button><p class="drawer-form-error" role="alert" tabindex="-1" hidden></p></div><footer class="drawer-footer"><div class="drawer-actions"><button class="primary" data-recovery-apply>Use current session in browser</button><button data-recovery-cancel>Cancel</button></div></footer></div>`;
+  dialog.innerHTML=`<div class="section-edit-form"><header class="drawer-header"><h2 id="recovery-title">Recover browser saving</h2></header><div class="drawer-body"><p>Use <strong>${e(workspace.name)}</strong> as this browser’s saved workspace. The existing browser data will be kept as a downloadable copy in Study.</p><p>Recovery JSON also saves unfinished alignment and curve drafts so you can reopen them later. Earlier browser data remains available in the file for inspection.</p><button data-recovery-download>Save recovery JSON</button><p class="drawer-form-error" role="alert" tabindex="-1" hidden></p></div><footer class="drawer-footer"><div class="drawer-actions"><button class="primary" data-recovery-apply>Use current session in browser</button><button data-recovery-cancel>Cancel</button></div></footer></div>`;
   dialog.querySelector('[data-recovery-download]').onclick=saveRecovery;
   dialog.querySelector('[data-recovery-cancel]').onclick=()=>dialog.close();
   dialog.querySelector('[data-recovery-apply]').onclick=()=>{
@@ -774,7 +775,7 @@ function openBrowserRecovery() {
       recoverBrowserSaving(localStorage,snapshot,workspace,currentDrafts(),`railclear.recovery.${newId('snapshot')}`);
       storageExpected=localStorage.getItem(WORKSPACE_KEY);draftsExpected=localStorage.getItem(DRAFTS_KEY);
       storageBlocked=false;draftsBlocked=false;storageMessage='';draftStorageMessage='';
-      progress="Browser saving recovered. Earlier browser data is available in Study results.";shell();dialog.close();
+      progress="Browser saving recovered. Earlier browser data is available in Study.";shell();dialog.close();
     } catch(ex) {
       // Keep the original expected values/blocked state. A partial replacement
       // retains its backup; subsequent automatic writes still check both keys.
@@ -1390,7 +1391,7 @@ function inspectSectionSample(button) {
  const token=generation,m=fleetResult.members.find(m=>m.id===button.dataset.inspectMember);
  const trace=calculateCase(m.project,Number(button.dataset.inspectStart),Number(button.dataset.inspectSpeed),{record:true});
  const dialog=document.createElement('dialog');dialog.className='case-inspector';dialog.setAttribute('aria-labelledby','sample-title');
- dialog.innerHTML=`<header><div><p class="eyebrow">INSPECTED SECTION SAMPLE</p><h2 id="sample-title">${e(m.name)}</h2><p>${ch(trace.startM)} · ${n(trace.speedKph)} km/h commanded · ${e(m.project.scenario.algorithm??'rk4')}</p></div><button data-close-sample aria-label="Close sample inspector">Close</button></header><dl class="input-facts"><div><dt>Raw first arrest</dt><dd>${n(trace.distanceM,3)} m</dd></div><div><dt>Protected distance</dt><dd>${n(trace.protectedM,3)} m</dd></div><div><dt>Margin beyond service</dt><dd>${n(trace.signedMarginM,3)} m</dd></div><div><dt>First arrest time</dt><dd>${n(trace.timeS,3)} s</dd></div></dl><div class="figure-scroll" tabindex="0" role="region" aria-label="Inspected section sample trajectory">${drawTrajectory(trace,m.project)}</div><p class="note">This is the selected section's sampled governing case. The continuous bound uses a separate comparison model. Position and clearance allowances remain explicit.</p><div class="toolbar"><button data-sample-trace>Sample trace · CSV</button><button data-sample-figure>Trajectory figure · SVG</button><button data-open-alternative>Open full alternative study</button></div>`;
+ dialog.innerHTML=`<header><div><h2 id="sample-title">${e(m.name)}</h2><p>${ch(trace.startM)} · ${n(trace.speedKph)} km/h commanded · ${e(algorithmName(m.project))}</p></div><button data-close-sample aria-label="Close sample inspector">Close</button></header><dl class="input-facts"><div><dt>Raw first arrest</dt><dd>${n(trace.distanceM,3)} m</dd></div><div><dt>Protected distance</dt><dd>${n(trace.protectedM,3)} m</dd></div><div><dt>Margin beyond service</dt><dd>${n(trace.signedMarginM,3)} m</dd></div><div><dt>First arrest time</dt><dd>${n(trace.timeS,3)} s</dd></div></dl><div class="figure-scroll" tabindex="0" role="region" aria-label="Inspected section sample trajectory">${drawTrajectory(trace,m.project)}</div><p class="note">Sampled governing case. The continuous bound has a separate comparison model and governor.</p><div class="toolbar"><button data-sample-trace>Sample trace · CSV</button><button data-sample-figure>Trajectory figure · SVG</button><button data-open-alternative>Alternative details</button></div>`;
  const fresh=()=>token===generation&&!stale&&!busy;
  dialog.querySelector('[data-close-sample]').onclick=()=>dialog.close();
  dialog.querySelector('[data-sample-trace]').onclick=()=>{if(fresh())download('railclear-inspected-sample.csv',traceCSV({project:m.project,inputDigest:m.inputDigest,governing:trace}),'text/csv');};

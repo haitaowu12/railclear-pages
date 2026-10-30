@@ -5,9 +5,9 @@ Compare railway first-arrest distance requirements across vehicles, operating/fa
 ## Start a study
 
 1. In **Sections & fleet**, define failure-entry ranges and assign vehicles, operating profiles and routes. Select the quantity to allocate and a rounding increment for each section.
-2. In **Study inputs**, review vehicle rates, allowances, failure timing, alignment and project basis. Apply or discard each draft before leaving.
-3. Use **Calculation methods** to select time integration, classic analytical or work–energy within its supported input domain. ETCS is definition only.
-4. Run the study and inspect **Study results**. Read failures and continuous-bound refusals alongside the sampled allocation register.
+2. In **Inputs**, review vehicle rates, allowances, failure timing, alignment and project basis. Apply or discard each draft before leaving.
+3. Use **Methods** to select time integration, classic analytical or work–energy within its supported input domain. ETCS is definition only.
+4. Use **Run study** and inspect **Study**. Edit the selected vehicle or failure profile beside the allocation register; applied changes require a fresh run. Read failures and continuous-bound refusals alongside the sampled allocation register.
 5. Download the study pack for the report, portable workspace, reproducible study and full CSV records. Save workspace inputs separately whenever needed.
 
 Calculations and browser saving stay on your device. Export files may contain confidential data if you supply it. Browser saving is a recovery convenience; keep controlled copies of completed studies.

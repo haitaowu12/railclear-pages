@@ -276,29 +276,34 @@ export function workspaceReportHTML(r) {
         return `<h2>Route-variant comparison · ${g.direction === 1 ? "increasing" : "decreasing"} chainage</h2><p>Shared declared datum: ${esc(g.datum)}. Confirm coordinate comparability. Each route retains its own allocations; this figure does not create a merged route value.</p><div class="legend">${compatible.map((x, i) => `<span style="border-left:4px solid ${PALETTE[i % PALETTE.length]};padding-left:8px">${esc(x.routeName)}</span>`).join("")}</div>${routeVariantSVG(r, compatible)}`;
       })
       .join("");
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(w.name)} — RailClear mixed-fleet study</title><style>body{font:14px/1.6 system-ui;color:#1c3c31;max-width:1100px;margin:32px auto;padding:24px}h1{font-size:32px;line-height:1.2}h2{border-bottom:1px solid #cad7ce;padding-bottom:10px;margin-top:40px}.notice{border-left:4px solid #a66c0a;background:#fff3d6;padding:16px}table{border-collapse:collapse;width:100%;font-size:11px}th,td{text-align:left;padding:8px;border-bottom:1px solid #dce3df;overflow-wrap:anywhere;vertical-align:top}th{overflow-wrap:normal;word-break:normal}.nowrap{white-space:nowrap;overflow-wrap:normal}.status-cell{overflow-wrap:normal;word-break:normal}svg{width:100%;height:auto}.table{overflow:auto}.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px}code,pre{white-space:pre-wrap;overflow-wrap:anywhere}details{margin:16px 0}@media print{body{max-width:none;margin:0;padding:0}thead{display:table-header-group}tr{break-inside:avoid}h2,h3{break-after:avoid}.table{overflow:visible}@page{size:A4 landscape;margin:15mm}}</style><body><p>RAILCLEAR · MIXED-FLEET CALCULATION RECORD · ${esc(r.engine)}</p><h1>${esc(w.name)}</h1><p>Revision ${esc(w.revision)} · ${esc(w.author || "Prepared by not specified")} · ${esc(r.generatedAt)}</p><div class="notice"><strong>ENGINEERING STUDY — INDEPENDENT REVIEW REQUIRED</strong><br>Status ${esc(r.status)}. ${r.computedCount} computed / ${r.candidateCount} candidate cases; ${r.failedCount} failed and ${r.excludedCount} inapplicable. Unavailable fleet values are never replaced with partial maxima.</div><p>Workspace input SHA-256: <code>${esc(r.inputDigest)}</code></p><p>Basis: ${esc(w.basis)}</p><section><h2>Calculation algorithms</h2><ul>${r.members.map(m=>`<li>${esc(m.name)}: ${esc(algorithmName(m.project))} · ${esc(algorithmIdentity(m.project))} · grade ${esc(m.project.scenario.method)}</li>`).join('')}</ul><p>Algorithms are compared in separate groups. Work–energy uses the acceleration-input model; no force/inertia, curvature, component-brake or ETCS equivalence is implied.</p></section>${continuousBoundsHTML(r)}<h2>Sampled section allocation register</h2>${table(
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(w.name)} — RailClear mixed-fleet study</title><style>body{font:14px/1.6 system-ui;color:#23262c;max-width:1100px;margin:32px auto;padding:24px}h1{font-size:32px;line-height:1.2}h2{border-bottom:1px solid #d8dce4;padding-bottom:10px;margin-top:40px}.notice{border-left:4px solid #a66c0a;background:#fff3d6;padding:16px}table{border-collapse:collapse;width:100%;font-size:11px}th,td{text-align:left;padding:8px;border-bottom:1px solid #dce3df;overflow-wrap:anywhere;vertical-align:top}th{overflow-wrap:normal;word-break:normal}.nowrap{white-space:nowrap;overflow-wrap:normal}.status-cell{overflow-wrap:normal;word-break:normal}svg{width:100%;height:auto}.table{overflow:auto}.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px}code,pre{white-space:pre-wrap;overflow-wrap:anywhere}details{margin:16px 0}@media print{body{max-width:none;margin:0;padding:0}thead{display:table-header-group}tr{break-inside:avoid}h2,h3{break-after:avoid}.table{overflow:visible}@page{size:A4 landscape;margin:15mm}}</style><body><p>RAILCLEAR · MIXED-FLEET CALCULATION RECORD · ${esc(r.engine)}</p><h1>${esc(w.name)}</h1><p>Revision ${esc(w.revision)} · ${esc(w.author || "Prepared by not specified")} · ${esc(r.generatedAt)}</p><div class="notice"><strong>ENGINEERING STUDY — INDEPENDENT REVIEW REQUIRED</strong><br>Status ${esc(r.status)}. ${r.computedCount} computed / ${r.candidateCount} candidate cases; ${r.failedCount} failed and ${r.excludedCount} inapplicable. Unavailable fleet values are never replaced with partial maxima.</div><h2>Sampled section allocation register</h2>${table(
     [
       "Section / reference",
+      "Allocated m",
+      "Governing vehicle/profile alternative",
+      "Entry m / speed km/h",
       "Route / direction / method",
       "Entry domain m",
       "Allocated quantity",
       "Status",
-      "Allocated m",
-      "Governing vehicle/profile alternative",
-      "Entry m / speed km/h",
       "Protected-point residual m",
       "Residual governor (alternative / entry m / speed km/h)",
     ],
     r.allocations.map((a) => [
       a.name +
         " / " +
-        a.referenceKind +
+        a.referenceKind.replaceAll("-", " ") +
         " / " +
         a.referenceId +
         (a.protectedPointM === null
           ? ""
           : " / protected point " + a.protectedPointM + " m"),
-      a.routeId + " / " + a.direction + " / " + a.method + " / " + (a.algorithm??"rk4"),
+      a.allocatedM,
+      a.governing ? names.get(a.governing.alternativeId) : "Unavailable",
+      a.governing
+        ? a.governing.startM + " / " + a.governing.speedKph
+        : "Unavailable",
+      (w.routes.find(route=>route.id===a.routeId)?.name||a.routeId) + " / " + (a.direction===1?"Increasing":"Decreasing") + " / " + (a.method==="constant"?"Constant gradient":"Finite-train gradient") + " / " + algorithmName({scenario:{algorithm:a.algorithm}}),
       a.fromM + "–" + a.toM,
       (a.metric === "selectedMarginM"
         ? "Margin beyond ideal service target"
@@ -307,17 +312,12 @@ export function workspaceReportHTML(r) {
         a.roundM +
         " m",
       a.status,
-      a.allocatedM,
-      a.governing ? names.get(a.governing.alternativeId) : "Unavailable",
-      a.governing
-        ? a.governing.startM + " / " + a.governing.speedKph
-        : "Unavailable",
       a.minimumResidualM,
       a.residualCase
         ? `${names.get(a.residualCase.alternativeId) || a.residualCase.alternativeId} / ${a.residualCase.startM} / ${a.residualCase.speedKph}`
         : "Unavailable",
     ]),
-  )}<h2>Compared alternatives</h2>${table(
+  )}<h2>Study basis</h2><p>Workspace input SHA-256: <code>${esc(r.inputDigest)}</code></p><p>Basis: ${esc(w.basis)}</p><section><h2>Calculation algorithms</h2><ul>${r.members.map(m=>`<li>${esc(m.name)}: ${esc(algorithmName(m.project))} · ${esc(algorithmIdentity(m.project))} · grade ${esc(m.project.scenario.method)}</li>`).join('')}</ul><p>Algorithms are compared in separate groups. Work–energy uses the acceleration-input model; no force/inertia, curvature, component-brake or ETCS equivalence is implied.</p></section>${continuousBoundsHTML(r)}<h2>Compared alternatives</h2>${table(
     [
       "ID / alternative",
       "Vehicle",
