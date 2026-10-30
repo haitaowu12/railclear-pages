@@ -1,7 +1,8 @@
-# RailClear railclear-point-mass/0.3.0
+# RailClear railclear-point-mass/0.4.0
 # project=Reference corridor revision=P01
+# calculation_algorithm=rk4; algorithm_identity=railclear-rk4/1.0.0
 # input_sha256=b8a607ed79fbf2134a899fac5334261738820435b22c0fe1395e9fac2360f2f2
-# generated_utc=2026-10-26T14:56:52.228Z
+# generated_utc=2026-10-30T05:37:06.664Z
 # direction=1; raw distance datum=actual leading end at failure start
 # full_inputs=companion RailClear study JSON; failed cases are retained below
 # status=computed; vehicle_basis=Synthetic — demonstration only

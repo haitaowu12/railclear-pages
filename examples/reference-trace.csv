@@ -1,4 +1,4 @@
-# railclear-point-mass/0.3.0 input_sha256=b8a607ed79fbf2134a899fac5334261738820435b22c0fe1395e9fac2360f2f2
+# railclear-point-mass/0.4.0 input_sha256=b8a607ed79fbf2134a899fac5334261738820435b22c0fe1395e9fac2360f2f2 algorithm=railclear-rk4/1.0.0
 t_s,distance_from_start_m,front_chainage_m,speed_kph,phase
 "0","0","6580","84","initial"
 "0.1","2.339058781690539","6582.33905878169","84.4122322817188","traction"

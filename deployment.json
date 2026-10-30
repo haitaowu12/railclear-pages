@@ -1,16 +1,11 @@
 {
-  "source_commit": "a788013648aa94d65a5ec2063df0b8c627e6cea7",
+  "source_commit": "cd63002446cbf019e35c231c8f8aa6e585acf26b",
   "hosting": "GitHub Pages branch publishing",
   "files": [
     {
-      "path": "CHANGELOG.md",
-      "bytes": 2447,
-      "sha256": "e56b2f4ecd623636ae0c24f29edaf079801200792e5fde3ea426edbf4043a691"
-    },
-    {
       "path": "README.md",
-      "bytes": 12251,
-      "sha256": "995c5891efada31ce7858d0671fe77db026db92be10923725e9a12edb5ea1160"
+      "bytes": 2311,
+      "sha256": "2bb7ee8730adeb27e0e23bcd131f0b2d92a86825a35b7dac36f83436c530a67f"
     },
     {
       "path": "docs/CALCULATION-CONTRACT.md",
@@ -28,29 +23,9 @@
       "sha256": "fb987a1833996bf1ce9db867cde86519fe0c193d11f802e87a3b6af4d1d5c5a7"
     },
     {
-      "path": "docs/PAGES.md",
-      "bytes": 1036,
-      "sha256": "91bebfde684e665b0aa92f4bce93cdd101e3c40d95ec91fdd707f82a8606291c"
-    },
-    {
       "path": "docs/PROJECT-QUALIFICATION.md",
       "bytes": 6351,
       "sha256": "c970a381a10b47a74e9d6683a24b19be46004d344ac68336bf3dc826b784bc08"
-    },
-    {
-      "path": "docs/RESEARCH.md",
-      "bytes": 22331,
-      "sha256": "bd16e1b912b59191ddcc8f8878e8111a6e03ee88af3773d0a8eb2a22b765cd60"
-    },
-    {
-      "path": "docs/ROADMAP.md",
-      "bytes": 6169,
-      "sha256": "dc9c736e13dcaec8ba31f8e5e79be07ae5a26a3bd0e50533be948bfec366c196"
-    },
-    {
-      "path": "docs/VERIFICATION.md",
-      "bytes": 30647,
-      "sha256": "83dfc431d4ad3dc771c3cf846408ed632d6a33bba92d141d8d3e92d03c671a26"
     },
     {
       "path": "examples/alignment-template.csv",
@@ -64,28 +39,28 @@
     },
     {
       "path": "examples/common-entry-traces.csv",
-      "bytes": 277352,
-      "sha256": "38f6677c85f09be9bf7c44d3769971c8b543bc587d1171aad13d702451219352"
+      "bytes": 282902,
+      "sha256": "0af685901f95c0b8faaa31e3625da02a2ad98b039bf9afc295d1896985d4502a"
     },
     {
       "path": "examples/continuous-section-bounds.csv",
-      "bytes": 31967,
-      "sha256": "3e97c77944f9ab159e067e45298c2c83fc2667b1ca18ac832d634cab67a6c882"
+      "bytes": 32039,
+      "sha256": "ba469ef8de7f71ab060d2069bd2d1cec7ca3d8c07620d49bdffc1134581718bb"
     },
     {
       "path": "examples/fleet-cases.csv",
-      "bytes": 153379,
-      "sha256": "ae47307412d749a360b3caf2a80828e5a485a77862b232baf4c9b90662eae2ec"
+      "bytes": 155275,
+      "sha256": "0482c872ffcd6fbbe10845b7ab6e82ccc984a04af87fb1856bd8427f00c0c8d1"
     },
     {
       "path": "examples/fleet-envelopes.csv",
-      "bytes": 47444,
-      "sha256": "304ae1d9bf8eee8585f519f9b7b1fe5321dfb092d037dc63909966afdaff8610"
+      "bytes": 48092,
+      "sha256": "fbee1cbc71490b0b4ea9989dc21edb965f135e84a1d75bfd20584b18fb1820bb"
     },
     {
       "path": "examples/mixed-fleet-study.json",
-      "bytes": 1397356,
-      "sha256": "845975c8a9ca7ff15850c9663a4bafaa87699ea6c877c1f57e0942312ad9840f"
+      "bytes": 1469889,
+      "sha256": "1dc3f437e0873a0c2ee71f4d2c9cf6c5db0fcc5792a5c2ccd71761a8dfb1b622"
     },
     {
       "path": "examples/mixed-fleet-workspace.json",
@@ -94,8 +69,8 @@
     },
     {
       "path": "examples/operating-route-profiles-report.html",
-      "bytes": 5719560,
-      "sha256": "5488c79044e26acf698e8a61eda9ceaed0961bc7a867b5604add026da64f01f0"
+      "bytes": 6033205,
+      "sha256": "1102ca7d623dc65d3e0267b74e8d2f70b6ce3559a34a928d623a355920609a9e"
     },
     {
       "path": "examples/operating-route-profiles-workspace.json",
@@ -104,8 +79,8 @@
     },
     {
       "path": "examples/reference-fleet-report.html",
-      "bytes": 1946187,
-      "sha256": "15644997cb2c746526e3e295d73025cac74760c800dd693bdd079ef2cde394ad"
+      "bytes": 2050978,
+      "sha256": "eb930f6bc763e37a867550d4047235b41da03ffd0639ed9c3b004b57c6b25a57"
     },
     {
       "path": "examples/reference-project.json",
@@ -114,23 +89,23 @@
     },
     {
       "path": "examples/reference-register.csv",
-      "bytes": 18662,
-      "sha256": "8ee4c1119221c7bf5f7fff64b6d257d3ef8e8da0bc591530b6bcc6968b0b5497"
+      "bytes": 18730,
+      "sha256": "2b9399da9eb93a3a32b03a74de1c86d39be7e780dc99f7240ed700530d769ea2"
     },
     {
       "path": "examples/reference-report.html",
-      "bytes": 238411,
-      "sha256": "a68c176244060e9df73acac6ac6653903a77234eaa305dd936d25216b1d208f1"
+      "bytes": 250904,
+      "sha256": "e1930056a497dbadc346f790e2796c5c4af743719bb8b9b4d3cf16527fde8ffa"
     },
     {
       "path": "examples/reference-study.json",
-      "bytes": 154092,
-      "sha256": "f66a39a5cac778a8c4d2b6c6be86366f12d9583b574950276155264e75f1609f"
+      "bytes": 162320,
+      "sha256": "17414f81d6955ecadcf820f7efad8a7694eca7cce3b37c889fd699632ec6d1cb"
     },
     {
       "path": "examples/reference-trace.csv",
-      "bytes": 37822,
-      "sha256": "3e1e3aefe33c840a9179d3fd41786d541278139f5f8ab91dbe98148ad0f71ba6"
+      "bytes": 37852,
+      "sha256": "4db41e5d741e2786809e0d06f1a092ed6bc812a22a5627eae358b62be2c86819"
     },
     {
       "path": "examples/reference-trajectory.svg",
@@ -139,8 +114,8 @@
     },
     {
       "path": "examples/section-allocations.csv",
-      "bytes": 1833,
-      "sha256": "c8e2cbc09ace73cfe98ec4a30fb3ad1b17b0a02c7a1e56fb3454cb48dbd359fc"
+      "bytes": 1875,
+      "sha256": "a7b50efeeb4a1b24e8ee78107ca655dacbc62dbf10745d8396d8a869661908dd"
     },
     {
       "path": "index.html",
