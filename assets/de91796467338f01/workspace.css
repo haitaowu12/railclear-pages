@@ -21,6 +21,8 @@ button.quiet{border-color:transparent;box-shadow:none;background:transparent}
 .nav-bar .active-alternative{display:flex;gap:8px;align-items:center;font-size:11px;min-width:0}.nav-bar .active-alternative select{padding:4px 8px;border-color:#d2d6df;max-width:220px;width:auto}
 .navigation-toggle{display:none!important}
 main.workspace{margin:0;padding:20px 24px 40px;max-width:none;min-width:0;width:100%;display:block}
+.project-footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:12px}.project-footer a{display:inline-block;color:var(--muted);padding:6px 0;text-underline-offset:3px}
+@media print{.project-footer{display:none}}
 .heading{position:relative;top:auto;padding:0 0 16px;margin:0;gap:20px;min-height:36px;background:#fff}
 h1{font-size:20px;letter-spacing:-.45px;font-weight:650;line-height:1.25}h2{font-size:14px;letter-spacing:-.15px;margin:0 0 12px;font-weight:650}h3{font-size:13px;margin:20px 0 10px}
 .heading-actions{gap:8px}.heading-actions .state{margin-right:6px;white-space:nowrap;color:#626a77;font-size:12px}.state:before{display:none}.state.pending{color:#8c6225}

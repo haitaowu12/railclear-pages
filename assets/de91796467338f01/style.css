@@ -393,11 +393,33 @@ body:has(.section-drawer[open]) { overflow: hidden; }
 .constant-rate > span { display: block; margin-top: 4px; }
 .template-disclosure > summary { font-size: 13px; }
 .template-disclosure .vehicle-library { margin-top: 16px; }
-.failure-timeline { display: flex; flex-wrap: wrap; list-style: none; padding: 20px 0; margin: 16px 0 0; gap: 0; border-block: 1px solid var(--line); }
-.failure-timeline li { flex: 1 1 90px; padding: 4px 16px 4px 0; min-width: 0; }
-.failure-timeline strong { display: block; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.failure-timeline strong span { font-size: 12px; font-weight: 400; color: var(--muted); }
-.failure-timeline li > span { display: block; color: var(--muted); font-size: 12px; }
+.failure-timing { --timing-label-width: 220px; margin: 20px 0 24px; padding: 16px 24px 12px; background: var(--soft); }
+.failure-timing figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; font-size: 13px; }
+.failure-timing figcaption > span { color: var(--muted); font-size: 12px; }
+.timing-axis { display: flex; justify-content: space-between; margin: 0 0 8px var(--timing-label-width); color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.timing-lane { display: grid; grid-template-columns: var(--timing-label-width) minmax(0,1fr); align-items: center; min-height: 48px; }
+.timing-label { padding-right: 16px; font-size: 13px; line-height: 1.5; }
+.timing-label strong,.timing-label span { display: block; }
+.timing-label span { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.timing-track { height: 26px; position: relative; border-inline: 1px solid #cad1da; }
+.timing-track::before { content: ''; position: absolute; inset: 50% 0 auto; border-top: 1px solid #cad1da; }
+.timing-span { display: block; position: absolute; height: 14px; top: 6px; background: #647286; }
+.timing-traction .timing-span { background: #a16b28; }
+.timing-brake .timing-span { background: var(--green); clip-path: polygon(0 100%,100% 0,100% 100%); height: 24px; top: 1px; }
+.timing-end { position: absolute; top: 1px; bottom: 1px; width: 2px; background: var(--ink); transform: translateX(-1px); }
+.timing-command { position: absolute; top: -17px; bottom: -17px; border-left: 1px dashed #7d8897; }
+.timing-instant { visibility: hidden; }
+.failure-timing .note { margin: 16px 0 0; }
+@media(max-width:600px) {
+  .failure-timing { padding: 16px; }
+  .failure-timing figcaption { display: block; margin-bottom: 12px; }
+  .failure-timing figcaption > span { display: block; margin-top: 3px; }
+  .timing-axis { margin-left: 0; }
+  .timing-lane { display: block; padding: 8px 0; }
+  .timing-label { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0; margin-bottom: 8px; }
+  .timing-label span { text-align: right; }
+  .timing-command { top: 0; bottom: 0; }
+}
 .config .input-facts, .operating-editor .input-facts { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .study-sampling-link { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 16px; font-size: 12px; color: var(--muted); }
 .shared-input-note { margin-top: 20px; padding: 12px; background: #f5f6f8; border-left: 3px solid #b8c0d1; font-size: 12px; }
@@ -413,7 +435,7 @@ body:has(.section-drawer[open]) { overflow: hidden; }
 .curve-editor button { font-size: 12px; }
 .input-method-details summary { font-size: 12px; }
 @media(max-width:1100px) { .input-facts { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media(max-width:600px) { .performance-grid { grid-template-columns: 1fr; gap: 24px; } .input-facts { gap: 18px; } .failure-timeline { row-gap: 16px; } }
+@media(max-width:600px) { .performance-grid { grid-template-columns: 1fr; gap: 24px; } .input-facts { gap: 18px; } }
 @media(max-width:360px) { .input-facts, .config .input-facts { grid-template-columns: 1fr; } }
 @media(prefers-reduced-motion:reduce) { .section-drawer[open] { animation: none; } }
 .storage-warning { padding: 12px 14px; background: #fff5df; border: 1px solid #dfc28a; margin-bottom: 18px; font-size: 13px; color: #674b19; }

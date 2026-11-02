@@ -12,6 +12,8 @@ Compare railway first-arrest distance requirements across vehicles, operating/fa
 
 Calculations and browser saving stay on your device. Export files may contain confidential data if you supply it. Browser saving is a recovery convenience; keep controlled copies of completed studies.
 
+The failure-profile timing diagram places reaction, traction removal and brake build-up on one time scale from the initiating event. Exact times remain beside each lane. Both delays start at command, so traction can remain active after braking starts. Apply profile edits to update the diagram.
+
 ## Interpret results
 
 A section bounds failure-entry locations, not the stopping trajectory. Supply enough route coverage behind and ahead of the train. A failed applicable case makes the affected allocation unavailable.
@@ -21,3 +23,5 @@ Margin beyond the ideal service target and protected first-arrest distance use d
 Read the [calculation contract](docs/CALCULATION-CONTRACT.md), [solver domains](docs/CALCULATION-METHODS.md), [continuous-bound derivation](docs/CONTINUOUS-BOUND.md) and [project qualification worksheet](docs/PROJECT-QUALIFICATION.md) before using outputs in engineering decisions.
 
 Software checks do not qualify project inputs, establish standards/vendor equivalence or grant operational approval. Independent engineering review and project-specific evidence remain necessary.
+
+[Tony Wu · More projects](https://haitaowu12.github.io/tony-wu-home/).
